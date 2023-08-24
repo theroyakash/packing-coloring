@@ -315,8 +315,8 @@ int main() {
     levels++;
 
     while (levels--) {
-        char a[1000];
-        cin.getline(a, 1000);
+        char a[10000];
+        cin.getline(a, 10000);
 
         // String TOKENIZER to get all the numbers and convert them into integers
         // then push it into the vector
@@ -333,15 +333,18 @@ int main() {
     createGraphWhileLevelOrderTraversal(tree, g);
 
     // given the tree structure do approximatePackingColor on graph g.
-    int maxColor = g.approximatePackingColor(tree);
+    g.approximatePackingColor(tree);
     vector<Color> colors = g.colors;
+
+    int maxColor = -1;
 
     for (int i = 0; i < colors.size(); i++) {
         if ((i + 1) %3 == 0) cout << endl;
+        maxColor = std::max(colors[i].colorID, maxColor);
         cout << "[NODE]: " << i << " color -> " << colors[i] << endl;
     }
 
-    cout << "\n";
+    cout << "[MAXCOLOR] used: " << maxColor << "\n";
 
     cout << g << endl;
 
