@@ -10,9 +10,9 @@
 
 #include <iostream>
 #include <queue>
+#include <set>
 #include <string.h>
 #include <vector>
-#include <set>
 
 using namespace std;
 
@@ -22,10 +22,6 @@ public:
 
     Color(int colorID) {
         this->colorID = colorID;
-    }
-
-    bool operator==(Color& other) {
-        return this->colorID == other.colorID;
     }
 
     friend std::ostream &operator<<(std::ostream &, Color &);
@@ -112,15 +108,15 @@ public:
 
     friend std::ostream &operator<<(std::ostream &, Graph &);
 
-    void buildLevelOrderTraversalStructure(Tree* root) {
+    void buildLevelOrderTraversalStructure(Tree *root) {
         // do level order traversal (keep track of depth when doing so)
-        queue<pair<Tree*, int>> q;
+        queue<pair<Tree *, int>> q;
         q.push({root, 1});
 
-        while(not q.empty()) {
+        while (not q.empty()) {
             auto front = q.front();
 
-            Tree* front_root = front.first;
+            Tree *front_root = front.first;
             int depth = front.second;
 
             q.pop();
@@ -128,17 +124,20 @@ public:
             if (depth > levelOrderTraversal.size()) {
                 vector<int> level = {front_root->data};
                 levelOrderTraversal.push_back(level);
-            } else if (depth == levelOrderTraversal.size()){
+            } else if (depth == levelOrderTraversal.size()) {
                 levelOrderTraversal[depth - 1].push_back(front_root->data);
             }
 
-            if (front_root->left) q.push({front_root->left, depth + 1});
-            if (front_root->middle) q.push({front_root->middle, depth + 1});
-            if (front_root->right) q.push({front_root->right, depth + 1});
+            if (front_root->left)
+                q.push({front_root->left, depth + 1});
+            if (front_root->middle)
+                q.push({front_root->middle, depth + 1});
+            if (front_root->right)
+                q.push({front_root->right, depth + 1});
         }
     }
 
-    void packingColorOddLayersWithColorOne(Tree* root) {
+    void packingColorOddLayersWithColorOne(Tree *root) {
         buildLevelOrderTraversalStructure(root);
 
         int levels = levelOrderTraversal.size();
@@ -152,48 +151,96 @@ public:
         }
     }
 
-    int approximatePackingColor(Tree* root) {
+    int approximatePackingColor(Tree *root) {
         // color each odd-layered node with 1
         packingColorOddLayersWithColorOne(root);
 
         // start from the last uncolored level
         int lastUncoloredLevel = -1;
-        for (int i = levelOrderTraversal.size(); i >= 0; i--) {
-            if (Color(0) == colors[levelOrderTraversal[i][0]]) {
+        for (int i = levelOrderTraversal.size() - 1; i >= 0; i--) {
+            if (colors[levelOrderTraversal[i][0]].colorID == 0) {
                 lastUncoloredLevel = i;
+                break;
             }
         }
-        
-        for (int level = lastUncoloredLevel; level >= 0; level-=2) {
+
+        for (int level = lastUncoloredLevel; level >= 0; level -= 2) {
             vector<int> thisLevel = levelOrderTraversal[level];
             for (auto candidate : thisLevel) {
+                if (colors[candidate].colorID != 0)
+                    continue;
                 // we need to color this candidate.
                 // for each node do a bfs to find if it is colorable with color = color
-                int maxColor = maxNodes;
-                int currentlyExploredColor = 2;
+                int currentlyExploringColor = 1;
 
                 set<int> colorsFoundWhileTravelling;
 
-                while (currentlyExploredColor < maxNodes) {
+                while (currentlyExploringColor < maxNodes) {
                     // from color = 2 to color = MaxNodes
                     // check if it is possible to color with this node
-                    if (colorsFoundWhileTravelling.find(currentlyExploredColor) != colorsFoundWhileTravelling.end())
-                        colorsFoundWhileTravelling = travelForColor(Color(currentlyExploredColor), candidate);
-                
-                    currentlyExploredColor++;
+
+                    // cout << "[CANDIDATE]: " << candidate << " currentlyExploringColor = " << currentlyExploringColor << endl;
+
+                    if (colorsFoundWhileTravelling.count(currentlyExploringColor) == 0) {
+
+                        colorsFoundWhileTravelling = travelForColor(Color(currentlyExploringColor), candidate);
+
+                        // if we don't find the current color then we color it with
+                        // currentlyExploringColor and gtfo
+                        if (colorsFoundWhileTravelling.count(currentlyExploringColor) == 0) {
+                            // cout << "*************" << endl;
+                            // for (auto i : colorsFoundWhileTravelling) { cout << i << " ";}
+                            // cout << "\n*************" << endl;
+
+                            colors[candidate] = currentlyExploringColor;
+                            break;
+                        }
+                    }
+
+                    // if it is found this means we found the currentlyExploringColor
+                    // at a distance lower than the (int) currentlyExploringColor.
+                    currentlyExploringColor++;
                 }
             }
         }
-        
+
         return -1;
     }
 
     set<int> travelForColor(Color clr, int node) {
+        // to color the node with Color clr, we travel to clr distance in the
+        // graph by BFS
+        int distance = 0;
+        queue<pair<int, int>> q;
+        q.push({node, 0});
 
-    }
+        int MAX_PERMISSIBLE_DISTANCE = clr.colorID;
 
-    void findMaxColorUsedAtDistance(int distance) {
+        set<int> colorsFoundWhileVisiting;
 
+        bool visited[this->maxNodes + 1];
+
+        while (not q.empty()) {
+            pair<int, int> front = q.front();
+            int node = front.first;
+            distance = front.second;
+            // cout << "[VISITING] NODE: " << node << endl;
+
+            q.pop();
+
+            for (auto nbr : adj_list[node]) {
+                colorsFoundWhileVisiting.insert(colors[nbr].colorID);
+
+                if (distance + 1 <= MAX_PERMISSIBLE_DISTANCE) {
+                    if (not visited[nbr]) {
+                        q.push({nbr, distance + 1});
+                        visited[nbr] = true;
+                    }
+                }
+            }
+        }
+
+        return colorsFoundWhileVisiting;
     }
 };
 
@@ -202,7 +249,7 @@ std::ostream &operator<<(std::ostream &stream, Graph &g) {
     int nodes = adj_list.size();
     for (int i = 1; i < nodes; i++) {
         stream << i << " -> ";
-        for (int j: adj_list[i]) {
+        for (int j : adj_list[i]) {
             stream << j << " ";
         }
 
@@ -282,17 +329,17 @@ int main() {
 
     createGraphWhileLevelOrderTraversal(tree, g);
 
-    // cout << g << endl;
-
     // given the tree structure do approximatePackingColor on graph g.
     int maxColor = g.approximatePackingColor(tree);
     vector<Color> colors = g.colors;
-    
+
     for (int i = 0; i < colors.size(); i++) {
         cout << "[NODE]: " << i << " color -> " << colors[i] << endl;
     }
 
-    cout << maxColor << endl;
+    cout << g << endl;
+
+    // cout << maxColor << endl;
 
     return 0;
 }
