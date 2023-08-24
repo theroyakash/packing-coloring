@@ -182,8 +182,9 @@ public:
                     // cout << "[CANDIDATE]: " << candidate << " currentlyExploringColor = " << currentlyExploringColor << endl;
 
                     if (colorsFoundWhileTravelling.count(currentlyExploringColor) == 0) {
-
                         colorsFoundWhileTravelling = travelForColor(Color(currentlyExploringColor), candidate);
+
+                        // cout << "calling again for currentlyExploringColor = " << currentlyExploringColor << endl;
 
                         // if we don't find the current color then we color it with
                         // currentlyExploringColor and gtfo
@@ -218,23 +219,25 @@ public:
 
         set<int> colorsFoundWhileVisiting;
 
-        bool visited[this->maxNodes + 1];
+        vector<bool> BFSVisited(this->maxNodes + 1, false);
+        BFSVisited[node] = true;
 
         while (not q.empty()) {
             pair<int, int> front = q.front();
             int node = front.first;
             distance = front.second;
-            // cout << "[VISITING] NODE: " << node << endl;
+
+            colorsFoundWhileVisiting.insert(colors[node].colorID);
+
+            // cout << "[VISITING] NODE: " << node << " has color [COLOR]: " << colors[node] << endl;
 
             q.pop();
 
             for (auto nbr : adj_list[node]) {
-                colorsFoundWhileVisiting.insert(colors[nbr].colorID);
-
                 if (distance + 1 <= MAX_PERMISSIBLE_DISTANCE) {
-                    if (not visited[nbr]) {
+                    if (not BFSVisited[nbr]) {
                         q.push({nbr, distance + 1});
-                        visited[nbr] = true;
+                        BFSVisited[nbr] = true;
                     }
                 }
             }
@@ -334,8 +337,11 @@ int main() {
     vector<Color> colors = g.colors;
 
     for (int i = 0; i < colors.size(); i++) {
+        if ((i + 1) %3 == 0) cout << endl;
         cout << "[NODE]: " << i << " color -> " << colors[i] << endl;
     }
+
+    cout << "\n";
 
     cout << g << endl;
 
