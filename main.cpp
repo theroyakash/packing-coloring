@@ -13,6 +13,7 @@
 #include <set>
 #include <string.h>
 #include <vector>
+#include <chrono>
 
 using namespace std;
 
@@ -315,8 +316,8 @@ int main() {
     levels++;
 
     while (levels--) {
-        char a[10000];
-        cin.getline(a, 10000);
+        char a[400000];
+        cin.getline(a, 400000);
 
         // String TOKENIZER to get all the numbers and convert them into integers
         // then push it into the vector
@@ -332,8 +333,14 @@ int main() {
 
     createGraphWhileLevelOrderTraversal(tree, g);
 
+    auto procedure_start = std::chrono::high_resolution_clock::now();
     // given the tree structure do approximatePackingColor on graph g.
     g.approximatePackingColor(tree);
+    auto procedure_end = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration<float> duration = procedure_end - procedure_start;
+    cout << "[TOTAL TIME]: " << duration.count() << " seconds" << endl;
+
     vector<Color> colors = g.colors;
 
     int maxColor = -1;
@@ -346,9 +353,7 @@ int main() {
 
     cout << "[MAXCOLOR] used: " << maxColor << "\n";
 
-    cout << g << endl;
-
-    // cout << maxColor << endl;
+    // cout << g << endl;
 
     return 0;
 }
