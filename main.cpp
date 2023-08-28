@@ -316,8 +316,8 @@ int main() {
     levels++;
 
     while (levels--) {
-        char a[400000];
-        cin.getline(a, 400000);
+        char a[1250000];
+        cin.getline(a, 1250000);
 
         // String TOKENIZER to get all the numbers and convert them into integers
         // then push it into the vector
