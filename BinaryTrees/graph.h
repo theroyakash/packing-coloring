@@ -1,85 +1,15 @@
-/**
-****************************************************************
-* @file:	main.cpp [tree generation]
-* @author:	@theroyakash
-* @contact:	hey@theroyakash.com
-* @date:	13/08/2023 18:14:27 Sunday
-* @brief:	Tree Generation and transformation into a graph object
-****************************************************************
-**/
+#if !defined(GRAPHS)
+#define GRAPHS
 
+#include "color.h"
+#include "tree.h"
 #include <iostream>
 #include <queue>
 #include <set>
 #include <string.h>
 #include <vector>
-#include <chrono>
 
 using namespace std;
-
-class Color {
-public:
-    int colorID;
-
-    Color(int colorID) {
-        this->colorID = colorID;
-    }
-
-    friend std::ostream &operator<<(std::ostream &, Color &);
-};
-
-std::ostream &operator<<(std::ostream &stream, Color &c) {
-    stream << c.colorID;
-    return stream;
-}
-
-// Tree Definition
-class Tree {
-public:
-    int data;
-    Tree *left, *middle, *right;
-
-    Tree(int d) {
-        data = d;
-        left = nullptr;
-        middle = nullptr;
-        right = nullptr;
-    }
-};
-
-Tree *createTreeFromVector(vector<int> v) {
-    if (v.size() == 0)
-        return nullptr;
-
-    int root = v[0];
-    Tree *treeRoot = new Tree(root);
-
-    queue<Tree *> q;
-    q.push(treeRoot);
-    int i = 1;
-
-    while (not q.empty()) {
-        Tree *thisNode = q.front();
-        q.pop();
-
-        thisNode->left = new Tree(v[i++]);
-        q.push(thisNode->left);
-        if (i >= v.size())
-            break;
-
-        thisNode->middle = new Tree(v[i++]);
-        q.push(thisNode->middle);
-        if (i >= v.size())
-            break;
-
-        thisNode->right = new Tree(v[i++]);
-        q.push(thisNode->right);
-        if (i >= v.size())
-            break;
-    }
-
-    return treeRoot;
-}
 
 /**
  * Undirected unwieghted acyclic graphs are trees
@@ -131,8 +61,6 @@ public:
 
             if (front_root->left)
                 q.push({front_root->left, depth + 1});
-            if (front_root->middle)
-                q.push({front_root->middle, depth + 1});
             if (front_root->right)
                 q.push({front_root->right, depth + 1});
         }
@@ -263,15 +191,7 @@ std::ostream &operator<<(std::ostream &stream, Graph &g) {
     return stream;
 }
 
-void inOrder(Tree *root) {
-    if (root) {
-        inOrder(root->left);
-        cout << root->data << "\n";
-        inOrder(root->middle);
-        inOrder(root->right);
-    }
-}
-
+namespace GraphServices {
 void createGraphWhileLevelOrderTraversal(Tree *root, Graph &g) {
     queue<Tree *> q;
     q.push(root);
@@ -285,75 +205,12 @@ void createGraphWhileLevelOrderTraversal(Tree *root, Graph &g) {
             g.add_edge(front->data, (front->left)->data);
         }
 
-        if (front->middle) {
-            q.push(front->middle);
-            g.add_edge(front->data, (front->middle)->data);
-        }
-
         if (front->right) {
             q.push(front->right);
             g.add_edge(front->data, (front->right)->data);
         }
     }
 }
+}; // namespace GraphServices
 
-void fileIO() {
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-}
-
-int main() {
-
-    fileIO();
-
-    vector<int> v;
-    int levels;
-    cin >> levels;
-
-    int maxNodeID;
-    cin >> maxNodeID;
-
-    levels++;
-
-    while (levels--) {
-        char a[1250000];
-        cin.getline(a, 1250000);
-
-        // String TOKENIZER to get all the numbers and convert them into integers
-        // then push it into the vector
-        char *ans = strtok(a, " ");
-        while (ans != NULL) {
-            v.push_back(stoi(ans));
-            ans = strtok(NULL, " ");
-        }
-    }
-
-    Tree *tree = createTreeFromVector(v);
-    Graph g(maxNodeID);
-
-    createGraphWhileLevelOrderTraversal(tree, g);
-
-    auto procedure_start = std::chrono::high_resolution_clock::now();
-    // given the tree structure do approximatePackingColor on graph g.
-    g.approximatePackingColor(tree);
-    auto procedure_end = std::chrono::high_resolution_clock::now();
-
-    std::chrono::duration<float> duration = procedure_end - procedure_start;
-    cout << "[TOTAL TIME]: " << duration.count() << " seconds" << endl;
-
-    vector<Color> colors = g.colors;
-
-    int maxColor = -1;
-
-    for (int i = 0; i < colors.size(); i++) {
-        if ((i + 1) %3 == 0) cout << endl;
-        maxColor = std::max(colors[i].colorID, maxColor);
-        cout << "[NODE]: " << i << " color -> " << colors[i] << endl;
-    }
-
-    cout << "[MAXCOLOR] used: " << maxColor << "\n";
-
-    // cout << g << endl;
-
-    return 0;
-}
+#endif // GRAPHS

@@ -1,0 +1,56 @@
+[TOTAL TIME]: 0.00100221 seconds
+[NODE]: 0 color -> 0
+[NODE]: 1 color -> 1
+
+[NODE]: 2 color -> 9
+[NODE]: 3 color -> 10
+[NODE]: 4 color -> 11
+
+[NODE]: 5 color -> 1
+[NODE]: 6 color -> 1
+[NODE]: 7 color -> 1
+
+[NODE]: 8 color -> 1
+[NODE]: 9 color -> 1
+[NODE]: 10 color -> 1
+
+[NODE]: 11 color -> 1
+[NODE]: 12 color -> 1
+[NODE]: 13 color -> 1
+
+[NODE]: 14 color -> 2
+[NODE]: 15 color -> 3
+[NODE]: 16 color -> 4
+
+[NODE]: 17 color -> 2
+[NODE]: 18 color -> 3
+[NODE]: 19 color -> 5
+
+[NODE]: 20 color -> 2
+[NODE]: 21 color -> 3
+[NODE]: 22 color -> 6
+
+[NODE]: 23 color -> 2
+[NODE]: 24 color -> 3
+[NODE]: 25 color -> 4
+
+[NODE]: 26 color -> 2
+[NODE]: 27 color -> 3
+[NODE]: 28 color -> 5
+
+[NODE]: 29 color -> 2
+[NODE]: 30 color -> 3
+[NODE]: 31 color -> 7
+
+[NODE]: 32 color -> 2
+[NODE]: 33 color -> 3
+[NODE]: 34 color -> 4
+
+[NODE]: 35 color -> 2
+[NODE]: 36 color -> 3
+[NODE]: 37 color -> 5
+
+[NODE]: 38 color -> 2
+[NODE]: 39 color -> 3
+[NODE]: 40 color -> 8
+[MAXCOLOR] used: 11

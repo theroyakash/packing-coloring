@@ -1,0 +1,172 @@
+[TOTAL TIME]: 0.00154842 seconds
+[NODE]: 0 color -> 0
+[NODE]: 1 color -> 1
+
+[NODE]: 2 color -> 2
+[NODE]: 3 color -> 3
+[NODE]: 4 color -> 1
+
+[NODE]: 5 color -> 1
+[NODE]: 6 color -> 1
+[NODE]: 7 color -> 1
+
+[NODE]: 8 color -> 4
+[NODE]: 9 color -> 5
+[NODE]: 10 color -> 6
+
+[NODE]: 11 color -> 7
+[NODE]: 12 color -> 4
+[NODE]: 13 color -> 5
+
+[NODE]: 14 color -> 8
+[NODE]: 15 color -> 9
+[NODE]: 16 color -> 1
+
+[NODE]: 17 color -> 1
+[NODE]: 18 color -> 1
+[NODE]: 19 color -> 1
+
+[NODE]: 20 color -> 1
+[NODE]: 21 color -> 1
+[NODE]: 22 color -> 1
+
+[NODE]: 23 color -> 1
+[NODE]: 24 color -> 1
+[NODE]: 25 color -> 1
+
+[NODE]: 26 color -> 1
+[NODE]: 27 color -> 1
+[NODE]: 28 color -> 1
+
+[NODE]: 29 color -> 1
+[NODE]: 30 color -> 1
+[NODE]: 31 color -> 1
+
+[NODE]: 32 color -> 2
+[NODE]: 33 color -> 3
+[NODE]: 34 color -> 2
+
+[NODE]: 35 color -> 3
+[NODE]: 36 color -> 2
+[NODE]: 37 color -> 3
+
+[NODE]: 38 color -> 2
+[NODE]: 39 color -> 3
+[NODE]: 40 color -> 2
+
+[NODE]: 41 color -> 3
+[NODE]: 42 color -> 2
+[NODE]: 43 color -> 3
+
+[NODE]: 44 color -> 2
+[NODE]: 45 color -> 3
+[NODE]: 46 color -> 2
+
+[NODE]: 47 color -> 3
+[NODE]: 48 color -> 2
+[NODE]: 49 color -> 3
+
+[NODE]: 50 color -> 2
+[NODE]: 51 color -> 3
+[NODE]: 52 color -> 2
+
+[NODE]: 53 color -> 3
+[NODE]: 54 color -> 2
+[NODE]: 55 color -> 3
+
+[NODE]: 56 color -> 2
+[NODE]: 57 color -> 3
+[NODE]: 58 color -> 2
+
+[NODE]: 59 color -> 3
+[NODE]: 60 color -> 2
+[NODE]: 61 color -> 3
+
+[NODE]: 62 color -> 2
+[NODE]: 63 color -> 3
+[NODE]: 64 color -> 1
+
+[NODE]: 65 color -> 1
+[NODE]: 66 color -> 1
+[NODE]: 67 color -> 1
+
+[NODE]: 68 color -> 1
+[NODE]: 69 color -> 1
+[NODE]: 70 color -> 1
+
+[NODE]: 71 color -> 1
+[NODE]: 72 color -> 1
+[NODE]: 73 color -> 1
+
+[NODE]: 74 color -> 1
+[NODE]: 75 color -> 1
+[NODE]: 76 color -> 1
+
+[NODE]: 77 color -> 1
+[NODE]: 78 color -> 1
+[NODE]: 79 color -> 1
+
+[NODE]: 80 color -> 1
+[NODE]: 81 color -> 1
+[NODE]: 82 color -> 1
+
+[NODE]: 83 color -> 1
+[NODE]: 84 color -> 1
+[NODE]: 85 color -> 1
+
+[NODE]: 86 color -> 1
+[NODE]: 87 color -> 1
+[NODE]: 88 color -> 1
+
+[NODE]: 89 color -> 1
+[NODE]: 90 color -> 1
+[NODE]: 91 color -> 1
+
+[NODE]: 92 color -> 1
+[NODE]: 93 color -> 1
+[NODE]: 94 color -> 1
+
+[NODE]: 95 color -> 1
+[NODE]: 96 color -> 1
+[NODE]: 97 color -> 1
+
+[NODE]: 98 color -> 1
+[NODE]: 99 color -> 1
+[NODE]: 100 color -> 1
+
+[NODE]: 101 color -> 1
+[NODE]: 102 color -> 1
+[NODE]: 103 color -> 1
+
+[NODE]: 104 color -> 1
+[NODE]: 105 color -> 1
+[NODE]: 106 color -> 1
+
+[NODE]: 107 color -> 1
+[NODE]: 108 color -> 1
+[NODE]: 109 color -> 1
+
+[NODE]: 110 color -> 1
+[NODE]: 111 color -> 1
+[NODE]: 112 color -> 1
+
+[NODE]: 113 color -> 1
+[NODE]: 114 color -> 1
+[NODE]: 115 color -> 1
+
+[NODE]: 116 color -> 1
+[NODE]: 117 color -> 1
+[NODE]: 118 color -> 1
+
+[NODE]: 119 color -> 1
+[NODE]: 120 color -> 1
+[NODE]: 121 color -> 1
+
+[NODE]: 122 color -> 1
+[NODE]: 123 color -> 1
+[NODE]: 124 color -> 1
+
+[NODE]: 125 color -> 1
+[NODE]: 126 color -> 1
+[NODE]: 127 color -> 1
+[MAXCOLOR] used: 9
