@@ -70,10 +70,9 @@ int main() {
     int maxColor = -1;
 
     for (int i = 0; i < colors.size(); i++) {
-        if ((i + 1) % 3 == 0)
-            cout << endl;
+        // if ((i + 1) % 3 == 0) cout << endl;
         maxColor = std::max(colors[i].colorID, maxColor);
-        cout << "[NODE]: " << i << " color -> " << colors[i] << endl;
+        // cout << "[NODE]: " << i << " color -> " << colors[i] << endl;
     }
 
     cout << "[MAXCOLOR] used: " << maxColor << "\n";

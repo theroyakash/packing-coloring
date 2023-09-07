@@ -14,6 +14,7 @@
 #include <set>
 #include <string.h>
 #include <vector>
+#include <map>
 
 #include "color.h"
 #include "graph.h"
@@ -69,16 +70,20 @@ int main() {
 
     int maxColor = -1;
 
-    for (int i = 0; i < colors.size(); i++) {
-        if ((i + 1) % 3 == 0)
-            cout << endl;
+    map<int, int> colorCounter;
+
+    for (int i = 1; i < colors.size(); i++) {
+        if ((i + 1) % 3 == 0) cout << endl;
         maxColor = std::max(colors[i].colorID, maxColor);
         cout << "[NODE]: " << i << " color -> " << colors[i] << endl;
+        colorCounter[colors[i].colorID]++;
     }
 
     cout << "[MAXCOLOR] used: " << maxColor << "\n";
 
-    // cout << g << endl;
+    for (auto counter : colorCounter) {
+        cout << "color: " << counter.first << " -> " << counter.second << "\n";
+    }
 
     return 0;
 }
