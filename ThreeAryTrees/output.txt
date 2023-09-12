@@ -1,4 +1,4 @@
-[TOTAL TIME]: 0.0340839 seconds
+[TOTAL TIME]: 0.0359881 seconds
 [NODE]: 1 color -> 1
 
 [NODE]: 2 color -> 2

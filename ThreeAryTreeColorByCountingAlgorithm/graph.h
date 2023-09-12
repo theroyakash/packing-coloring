@@ -9,6 +9,8 @@
 #include <string.h>
 #include <vector>
 
+#include "progressbar.hpp"
+
 using namespace std;
 
 /**
@@ -68,6 +70,9 @@ public:
         }
     }
 
+    /**
+     * Unused API
+     */
     void packingColorOddLayersWithColorOne(Tree *root) {
         buildLevelOrderTraversalStructure(root);
 
@@ -103,6 +108,9 @@ public:
 
         // start from the last uncolored level
         int lastUncoloredLevel = levelOrderTraversal.size() - 2;
+
+        int maxReusableColorUpperBound = levelOrderTraversal.size() * 2 + 2;
+        int uniquelyUsedColors = 0;
 
         for (int level = lastUncoloredLevel; level >= 0; level -= 2) {
             vector<int> thisLevel = levelOrderTraversal[level];
@@ -140,11 +148,16 @@ public:
                     // if it is found this means we found the currentlyExploringColor
                     // at a distance lower than the (int) currentlyExploringColor.
                     currentlyExploringColor++;
+
+                    if (currentlyExploringColor > maxReusableColorUpperBound) {
+                        uniquelyUsedColors++;
+                        break;
+                    }
                 }
             }
         }
 
-        return -1;
+        return uniquelyUsedColors; // colors used once
     }
 
     set<int> travelForColor(Color clr, int node) {
