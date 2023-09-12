@@ -25,12 +25,12 @@ public:
 };
 
 namespace TreeServices {
-void inOrder(Tree *root) {
+void inOrderTraversalOnAThreeAryTree(Tree *root) {
     if (root) {
-        inOrder(root->left);
+        inOrderTraversalOnAThreeAryTree(root->left);
         cout << root->data << "\n";
-        inOrder(root->middle);
-        inOrder(root->right);
+        inOrderTraversalOnAThreeAryTree(root->middle);
+        inOrderTraversalOnAThreeAryTree(root->right);
     }
 }
 
@@ -66,6 +66,46 @@ Tree *createTreeFromVector(vector<int> v) {
     }
 
     return treeRoot;
+}
+
+vector<vector<int>> buildLevelOrderTraversalStructure(Tree *root) {
+    vector<vector<int>> levelOrderTraversal;
+    // do level order traversal (keep track of depth when doing so)
+    queue<pair<Tree *, int>> q;
+    q.push({root, 1});
+
+    while (not q.empty()) {
+        auto front = q.front();
+
+        Tree *front_root = front.first;
+        int depth = front.second;
+
+        q.pop();
+
+        if (depth > levelOrderTraversal.size()) {
+            vector<int> level = {front_root->data};
+            levelOrderTraversal.push_back(level);
+        } else if (depth == levelOrderTraversal.size()) {
+            levelOrderTraversal[depth - 1].push_back(front_root->data);
+        }
+
+        if (front_root->left)
+            q.push({front_root->left, depth + 1});
+        if (front_root->middle)
+            q.push({front_root->middle, depth + 1});
+        if (front_root->right)
+            q.push({front_root->right, depth + 1});
+    }
+
+    return levelOrderTraversal;
+}
+
+void randomlyDeleteBranchesOfTree(Tree *root, int numberOfNodes) {
+    vector<vector<int>> levelOrderTraversal = TreeServices::buildLevelOrderTraversalStructure(root);
+
+    int random_operations = (rand() % numberOfNodes) % (numberOfNodes / 10);
+    while (random_operations--) {
+    }
 }
 }; // namespace TreeServices
 

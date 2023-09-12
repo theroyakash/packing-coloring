@@ -42,32 +42,7 @@ public:
     friend std::ostream &operator<<(std::ostream &, Graph &);
 
     void buildLevelOrderTraversalStructure(Tree *root) {
-        // do level order traversal (keep track of depth when doing so)
-        queue<pair<Tree *, int>> q;
-        q.push({root, 1});
-
-        while (not q.empty()) {
-            auto front = q.front();
-
-            Tree *front_root = front.first;
-            int depth = front.second;
-
-            q.pop();
-
-            if (depth > levelOrderTraversal.size()) {
-                vector<int> level = {front_root->data};
-                levelOrderTraversal.push_back(level);
-            } else if (depth == levelOrderTraversal.size()) {
-                levelOrderTraversal[depth - 1].push_back(front_root->data);
-            }
-
-            if (front_root->left)
-                q.push({front_root->left, depth + 1});
-            if (front_root->middle)
-                q.push({front_root->middle, depth + 1});
-            if (front_root->right)
-                q.push({front_root->right, depth + 1});
-        }
+        levelOrderTraversal = TreeServices::buildLevelOrderTraversalStructure(root);
     }
 
     /**

@@ -1,1 +1,28 @@
-TOTAL NODES: 7174453
+TOTAL NODES: 29524
+[TOTAL TIME]: 3.3347 seconds
+[MAXCOLOR] used: 22
+color: 0 -> 759
+color: 1 -> 22143
+color: 2 -> 2215
+color: 3 -> 2214
+color: 4 -> 730
+color: 5 -> 730
+color: 6 -> 243
+color: 7 -> 243
+color: 8 -> 81
+color: 9 -> 81
+color: 10 -> 27
+color: 11 -> 27
+color: 12 -> 9
+color: 13 -> 9
+color: 14 -> 3
+color: 15 -> 3
+color: 16 -> 1
+color: 17 -> 1
+color: 18 -> 1
+color: 19 -> 1
+color: 20 -> 1
+color: 21 -> 1
+color: 22 -> 1
+uniquelyUsedColors: 759
+Total Colors Used = 781
