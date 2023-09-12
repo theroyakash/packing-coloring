@@ -51,7 +51,7 @@ int main() {
     Tree *tree = TreeServices::createTreeFromVector(v);
     Graph g(maxNodeID);
 
-    GraphServices::createGraphWhileLevelOrderTraversal(tree, g);
+    GraphServices::createGraphWhileLevelOrderTraversalOfEquivalentTree(tree, g);
 
     auto procedure_start = std::chrono::high_resolution_clock::now();
     // given the tree structure do approximatePackingColor on graph g.
