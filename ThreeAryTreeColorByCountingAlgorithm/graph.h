@@ -190,7 +190,7 @@ std::ostream &operator<<(std::ostream &stream, Graph &g) {
 }
 
 namespace GraphServices {
-void createGraphWhileLevelOrderTraversal(Tree *root, Graph &g) {
+void createGraphWhileLevelOrderTraversalOfEquivalentTree(Tree *root, Graph &g) {
     queue<Tree *> q;
     q.push(root);
 
