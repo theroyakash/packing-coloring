@@ -28,9 +28,7 @@ void fileIO() {
     freopen("output.txt", "w", stdout);
 }
 
-int main() {
-
-    fileIO();
+void solve() {
 
     vector<int> v;
     int levels;
@@ -85,5 +83,16 @@ int main() {
     int totalColorsUsed = maxColor + uniquelyUsedColors;
     cout << "Total Colors Used = " << totalColorsUsed << endl;
 
-    return 0;
+    cout << "***********" << endl;
+}
+
+int main() {
+    fileIO();
+
+    int testcases;
+    cin >> testcases;
+    
+    while (testcases--) {
+        solve();
+    }
 }
