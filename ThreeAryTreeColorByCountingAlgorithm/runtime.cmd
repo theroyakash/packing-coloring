@@ -4,7 +4,14 @@
 #PBS -l walltime=20:00:00
 #PBS -l select=1:ncpus=32
 
-cd ./ThreeAryTreeColorByCountingAlgorithm
+tpdir=`echo $PBS_JOBID | cut -f 1 -d .` 
+tempdir=$HOME/scratch/job$tpdir 
+mkdir -p $tempdir 
+cd $tempdir 
+cp -R $PBS_O_WORKDIR/* .
+
 make
 ./main
 make clean
+
+mv ../job$tpdir $PBS_O_WORKDIR/.
