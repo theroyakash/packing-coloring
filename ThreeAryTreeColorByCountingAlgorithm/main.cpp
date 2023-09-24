@@ -31,8 +31,11 @@ void fileIO() {
 void solve() {
 
     vector<int> v;
+
     int levels;
     cin >> levels;
+
+    std::cout << "[TOTAL LEVELS]: " << levels << std::endl;
 
     int maxNodeID = 0;
     

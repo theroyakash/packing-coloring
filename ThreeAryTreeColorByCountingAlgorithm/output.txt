@@ -1,5 +1,84 @@
+[TOTAL LEVELS]: 7
+TOTAL NODES: 1093
+[TOTAL TIME]: 0.0274151 seconds
+[MAXCOLOR] used: 16
+color: 0 -> 24
+color: 1 -> 820
+color: 2 -> 82
+color: 3 -> 82
+color: 4 -> 27
+color: 5 -> 27
+color: 6 -> 9
+color: 7 -> 9
+color: 8 -> 3
+color: 9 -> 3
+color: 10 -> 1
+color: 11 -> 1
+color: 12 -> 1
+color: 13 -> 1
+color: 14 -> 1
+color: 15 -> 1
+color: 16 -> 1
+uniquelyUsedColors: 24
+Total Colors Used = 40
+***********
+[TOTAL LEVELS]: 8
+TOTAL NODES: 3280
+[TOTAL TIME]: 0.0682976 seconds
+[MAXCOLOR] used: 18
+color: 0 -> 80
+color: 1 -> 2460
+color: 2 -> 246
+color: 3 -> 246
+color: 4 -> 82
+color: 5 -> 81
+color: 6 -> 27
+color: 7 -> 27
+color: 8 -> 9
+color: 9 -> 9
+color: 10 -> 3
+color: 11 -> 3
+color: 12 -> 1
+color: 13 -> 1
+color: 14 -> 1
+color: 15 -> 1
+color: 16 -> 1
+color: 17 -> 1
+color: 18 -> 1
+uniquelyUsedColors: 80
+Total Colors Used = 98
+***********
+[TOTAL LEVELS]: 9
+TOTAL NODES: 9841
+[TOTAL TIME]: 0.595342 seconds
+[MAXCOLOR] used: 20
+color: 0 -> 249
+color: 1 -> 7381
+color: 2 -> 738
+color: 3 -> 738
+color: 4 -> 244
+color: 5 -> 244
+color: 6 -> 81
+color: 7 -> 81
+color: 8 -> 27
+color: 9 -> 27
+color: 10 -> 9
+color: 11 -> 9
+color: 12 -> 3
+color: 13 -> 3
+color: 14 -> 1
+color: 15 -> 1
+color: 16 -> 1
+color: 17 -> 1
+color: 18 -> 1
+color: 19 -> 1
+color: 20 -> 1
+uniquelyUsedColors: 249
+Total Colors Used = 269
+***********
+[TOTAL LEVELS]: 10
 TOTAL NODES: 29524
-[TOTAL TIME]: 3.3347 seconds
+[TOTAL TIME]: 3.34458 seconds
 [MAXCOLOR] used: 22
 color: 0 -> 759
 color: 1 -> 22143
@@ -26,3 +105,4 @@ color: 21 -> 1
 color: 22 -> 1
 uniquelyUsedColors: 759
 Total Colors Used = 781
+***********
