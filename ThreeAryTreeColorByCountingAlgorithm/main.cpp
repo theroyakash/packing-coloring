@@ -43,13 +43,17 @@ void solve() {
         maxNodeID += pow(3, i);
     }
 
-    cout << "TOTAL NODES: " << maxNodeID << endl;
+    cout << "TOTAL ORIGINAL NODES: " << maxNodeID << endl;
 
     for (int i = 1; i <= maxNodeID; i++) {
         v.push_back(i);
     }
 
     Tree *tree = TreeServices::createTreeFromVector(v);
+    // int totalRemovedNodes = TreeServices::randomizedTreePruningRuntime(tree);
+
+    // std::cout << "AFTER REMOVAL, TOTAL NODES: " << maxNodeID - totalRemovedNodes << std::endl;
+    
     Graph g(maxNodeID);
 
     GraphServices::createGraphWhileLevelOrderTraversalOfEquivalentTree(tree, g);
