@@ -50,9 +50,6 @@ void solve() {
     }
 
     Tree *tree = TreeServices::createTreeFromVector(v);
-    // int totalRemovedNodes = TreeServices::randomizedTreePruningRuntime(tree);
-
-    // std::cout << "AFTER REMOVAL, TOTAL NODES: " << maxNodeID - totalRemovedNodes << std::endl;
     
     Graph g(maxNodeID);
 

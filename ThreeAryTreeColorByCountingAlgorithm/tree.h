@@ -4,10 +4,10 @@
 #include <chrono>
 #include <iostream>
 #include <queue>
+#include <random>
 #include <set>
 #include <string.h>
 #include <vector>
-#include <random>
 
 using namespace std;
 
@@ -42,29 +42,51 @@ Tree *createTreeFromVector(vector<int> v) {
     int root = v[0];
     Tree *treeRoot = new Tree(root);
 
+    const int prob_lower_bound = 1;
+    const int prob_upper_bound = 99;
+
+    std::random_device randomDevice;
+    std::mt19937 generator(randomDevice());
+
+    std::uniform_int_distribution<int> uniform_int_distribution(prob_lower_bound, prob_upper_bound);
+
     queue<Tree *> q;
     q.push(treeRoot);
     int i = 1;
+
+    int counter = 1;
 
     while (not q.empty()) {
         Tree *thisNode = q.front();
         q.pop();
 
-        thisNode->left = new Tree(v[i++]);
-        q.push(thisNode->left);
-        if (i >= v.size())
-            break;
+        counter++;
 
-        thisNode->middle = new Tree(v[i++]);
-        q.push(thisNode->middle);
-        if (i >= v.size())
-            break;
+        int random_int = uniform_int_distribution(generator);
 
-        thisNode->right = new Tree(v[i++]);
-        q.push(thisNode->right);
-        if (i >= v.size())
-            break;
+        if (random_int < 75) {
+            thisNode->left = new Tree(v[i++]);
+            q.push(thisNode->left);
+            if (i >= v.size())
+                break;
+        }
+        random_int = uniform_int_distribution(generator);
+        if (random_int < 75) {
+            thisNode->middle = new Tree(v[i++]);
+            q.push(thisNode->middle);
+            if (i >= v.size())
+                break;
+        }
+        random_int = uniform_int_distribution(generator);
+        if (random_int < 75) {
+            thisNode->right = new Tree(v[i++]);
+            q.push(thisNode->right);
+            if (i >= v.size())
+                break;
+        }
     }
+
+    std::cout << "TOTAL TREE NODE" << " " << counter << std::endl;
 
     return treeRoot;
 }
@@ -101,8 +123,8 @@ vector<vector<int>> buildLevelOrderTraversalStructure(Tree *root) {
     return levelOrderTraversal;
 }
 
-vector<vector<Tree*>> buildLevelOrderTraversalStructureWithTreeReference(Tree *root) {
-    vector<vector<Tree*>> levelOrderTraversal;
+vector<vector<Tree *>> buildLevelOrderTraversalStructureWithTreeReference(Tree *root) {
+    vector<vector<Tree *>> levelOrderTraversal;
     // do level order traversal (keep track of depth when doing so)
     queue<pair<Tree *, int>> q;
     q.push({root, 1});
@@ -116,7 +138,7 @@ vector<vector<Tree*>> buildLevelOrderTraversalStructureWithTreeReference(Tree *r
         q.pop();
 
         if (depth > levelOrderTraversal.size()) {
-            vector<Tree*> level = {front_root};
+            vector<Tree *> level = {front_root};
             levelOrderTraversal.push_back(level);
         } else if (depth == levelOrderTraversal.size()) {
             levelOrderTraversal[depth - 1].push_back(front_root);
@@ -133,51 +155,52 @@ vector<vector<Tree*>> buildLevelOrderTraversalStructureWithTreeReference(Tree *r
     return levelOrderTraversal;
 }
 
-int randomizedTreePruningRuntime(Tree* root) {
+int randomizedTreePruningRuntime(Tree *root) {
 
     int totalRemovedNodes = 0;
 
     const int prob_lower_bound = 1;
     const int prob_upper_bound = 99;
-    
+
     std::random_device randomDevice;
     std::mt19937 generator(randomDevice());
 
     std::uniform_int_distribution<int> uniform_int_distribution(prob_lower_bound, prob_upper_bound);
 
-    vector<vector<Tree*>> levelOrder = buildLevelOrderTraversalStructureWithTreeReference(root);
+    vector<vector<Tree *>> levelOrder = buildLevelOrderTraversalStructureWithTreeReference(root);
     int totalLayers = levelOrder.size();
 
     for (int layerID = totalLayers - 1; layerID > 0; layerID--) {
-        vector<Tree*> layer = levelOrder[layerID];
+        vector<Tree *> layer = levelOrder[layerID];
 
         long long int prob = 1;
         int damping = 1;
 
-        for (auto& node : layer) {
+        for (auto &node : layer) {
             prob = (1 << damping);
             int randomInt = uniform_int_distribution(generator);
 
             if (randomInt < (100 / prob)) {
                 // if the probability is 1/2, 1/4, 1/8, ...
                 // remove the node's right and left children
-                if (node -> left) {
+                if (node->left) {
                     totalRemovedNodes++;
                     node->left = nullptr;
                 }
 
-                if (node -> right) {
+                if (node->right) {
                     totalRemovedNodes++;
                     node->right = nullptr;
                 }
 
-                if (node -> middle) {
+                if (node->middle) {
                     totalRemovedNodes++;
                     node->middle = nullptr;
                 }
             }
 
-            if (layerID & 1) damping++;
+            if (layerID & 1)
+                damping++;
         }
     }
 

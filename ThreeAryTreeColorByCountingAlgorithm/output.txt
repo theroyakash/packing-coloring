@@ -1,112 +1,148 @@
 [TOTAL LEVELS]: 9
 TOTAL ORIGINAL NODES: 9841
-[TOTAL TIME]: 0.622051 seconds
-[MAXCOLOR] used: 20
-color: 0 -> 249
-color: 1 -> 7381
-color: 2 -> 738
-color: 3 -> 738
-color: 4 -> 244
-color: 5 -> 244
-color: 6 -> 81
-color: 7 -> 81
-color: 8 -> 27
-color: 9 -> 27
-color: 10 -> 9
-color: 11 -> 9
-color: 12 -> 3
-color: 13 -> 3
-color: 14 -> 1
-color: 15 -> 1
-color: 16 -> 1
-color: 17 -> 1
+TOTAL TREE NODE 4395
+[TOTAL TIME]: 0.432305 seconds
+[MAXCOLOR] used: 28
+color: 0 -> 421
+color: 1 -> 4592
+color: 2 -> 1940
+color: 3 -> 1666
+color: 4 -> 614
+color: 5 -> 311
+color: 6 -> 89
+color: 7 -> 73
+color: 8 -> 33
+color: 9 -> 33
+color: 10 -> 15
+color: 11 -> 15
+color: 12 -> 8
+color: 13 -> 8
+color: 14 -> 4
+color: 15 -> 4
+color: 16 -> 2
+color: 17 -> 2
 color: 18 -> 1
 color: 19 -> 1
 color: 20 -> 1
-uniquelyUsedColors: 249
-Total Colors Used = 269
+color: 21 -> 1
+color: 22 -> 1
+color: 23 -> 1
+color: 24 -> 1
+color: 25 -> 1
+color: 26 -> 1
+color: 27 -> 1
+color: 28 -> 1
+uniquelyUsedColors: 421
+Total Colors Used = 449
 ***********
 [TOTAL LEVELS]: 9
 TOTAL ORIGINAL NODES: 9841
-[TOTAL TIME]: 0.597442 seconds
-[MAXCOLOR] used: 20
-color: 0 -> 249
-color: 1 -> 7381
-color: 2 -> 738
-color: 3 -> 738
-color: 4 -> 244
-color: 5 -> 244
-color: 6 -> 81
-color: 7 -> 81
-color: 8 -> 27
-color: 9 -> 27
-color: 10 -> 9
-color: 11 -> 9
-color: 12 -> 3
-color: 13 -> 3
-color: 14 -> 1
-color: 15 -> 1
-color: 16 -> 1
-color: 17 -> 1
-color: 18 -> 1
-color: 19 -> 1
+TOTAL TREE NODE 4426
+[TOTAL TIME]: 0.531858 seconds
+[MAXCOLOR] used: 30
+color: 0 -> 424
+color: 1 -> 4277
+color: 2 -> 2066
+color: 3 -> 1758
+color: 4 -> 629
+color: 5 -> 345
+color: 6 -> 106
+color: 7 -> 83
+color: 8 -> 37
+color: 9 -> 35
+color: 10 -> 17
+color: 11 -> 17
+color: 12 -> 9
+color: 13 -> 9
+color: 14 -> 4
+color: 15 -> 4
+color: 16 -> 3
+color: 17 -> 3
+color: 18 -> 2
+color: 19 -> 2
 color: 20 -> 1
-uniquelyUsedColors: 249
-Total Colors Used = 269
+color: 21 -> 1
+color: 22 -> 1
+color: 23 -> 1
+color: 24 -> 1
+color: 25 -> 1
+color: 26 -> 1
+color: 27 -> 1
+color: 28 -> 1
+color: 29 -> 1
+color: 30 -> 1
+uniquelyUsedColors: 424
+Total Colors Used = 454
 ***********
 [TOTAL LEVELS]: 9
 TOTAL ORIGINAL NODES: 9841
-[TOTAL TIME]: 0.60344 seconds
-[MAXCOLOR] used: 20
-color: 0 -> 249
-color: 1 -> 7381
-color: 2 -> 738
-color: 3 -> 738
-color: 4 -> 244
-color: 5 -> 244
-color: 6 -> 81
-color: 7 -> 81
-color: 8 -> 27
+TOTAL TREE NODE 4408
+[TOTAL TIME]: 0.384052 seconds
+[MAXCOLOR] used: 26
+color: 0 -> 360
+color: 1 -> 5340
+color: 2 -> 1682
+color: 3 -> 1421
+color: 4 -> 505
+color: 5 -> 273
+color: 6 -> 89
+color: 7 -> 63
+color: 8 -> 28
 color: 9 -> 27
-color: 10 -> 9
-color: 11 -> 9
-color: 12 -> 3
-color: 13 -> 3
-color: 14 -> 1
-color: 15 -> 1
+color: 10 -> 12
+color: 11 -> 12
+color: 12 -> 6
+color: 13 -> 6
+color: 14 -> 3
+color: 15 -> 3
 color: 16 -> 1
 color: 17 -> 1
 color: 18 -> 1
 color: 19 -> 1
 color: 20 -> 1
-uniquelyUsedColors: 249
-Total Colors Used = 269
+color: 21 -> 1
+color: 22 -> 1
+color: 23 -> 1
+color: 24 -> 1
+color: 25 -> 1
+color: 26 -> 1
+uniquelyUsedColors: 360
+Total Colors Used = 386
 ***********
 [TOTAL LEVELS]: 9
 TOTAL ORIGINAL NODES: 9841
-[TOTAL TIME]: 0.617899 seconds
-[MAXCOLOR] used: 20
-color: 0 -> 249
-color: 1 -> 7381
-color: 2 -> 738
-color: 3 -> 738
-color: 4 -> 244
-color: 5 -> 244
-color: 6 -> 81
-color: 7 -> 81
-color: 8 -> 27
-color: 9 -> 27
-color: 10 -> 9
-color: 11 -> 9
-color: 12 -> 3
-color: 13 -> 3
-color: 14 -> 1
-color: 15 -> 1
-color: 16 -> 1
-color: 17 -> 1
+TOTAL TREE NODE 4389
+[TOTAL TIME]: 0.363671 seconds
+[MAXCOLOR] used: 28
+color: 0 -> 378
+color: 1 -> 5114
+color: 2 -> 1734
+color: 3 -> 1502
+color: 4 -> 552
+color: 5 -> 287
+color: 6 -> 85
+color: 7 -> 64
+color: 8 -> 28
+color: 9 -> 28
+color: 10 -> 15
+color: 11 -> 15
+color: 12 -> 9
+color: 13 -> 9
+color: 14 -> 3
+color: 15 -> 3
+color: 16 -> 2
+color: 17 -> 2
 color: 18 -> 1
 color: 19 -> 1
 color: 20 -> 1
-uniquelyUsedColors: 249
-Total Colors Used = 269
+color: 21 -> 1
+color: 22 -> 1
+color: 23 -> 1
+color: 24 -> 1
+color: 25 -> 1
+color: 26 -> 1
+color: 27 -> 1
+color: 28 -> 1
+uniquelyUsedColors: 378
+Total Colors Used = 406
 ***********
