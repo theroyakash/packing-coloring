@@ -1,6 +1,7 @@
 #if !defined(COLORS)
 #define COLORS
 
+
 #include <iostream>
 
 using namespace std;
@@ -17,8 +18,8 @@ public:
 };
 
 std::ostream &operator<<(std::ostream &stream, Color &c) {
-    stream << "[COLOR]: " << c.colorID;
+    stream << c.colorID;
     return stream;
 }
 
-#endif  // COLORS
+#endif // COLORS

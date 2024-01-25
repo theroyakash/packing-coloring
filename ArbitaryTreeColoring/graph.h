@@ -41,16 +41,30 @@ public:
 
     friend std::ostream &operator<<(std::ostream &, Graph &);
 
-    void buildLevelOrderTraversalStructure(Tree *root) {
-        this->levelOrderTraversal = TreeServices::buildLevelOrderTraversalStructure(root);
+    void buildLevelOrderTraversalStructure(int startID) {
+        // build the levelOrderTravesal for an arbitary graph
+        bool visited[maxNodes];
+        memset(visited, false, sizeof visited);
+        queue<int> q;
+        q.push(startID);
+
+        visited[startID] = false;
+
+        while (not q.empty()) {
+            int front = q.front(); q.pop();
+            for (int nbr : adj_list[front]) {
+                if(not visited[nbr]) {
+                    visited[nbr] = true;
+                    q.push(nbr);
+                }
+            }
+        }
     }
 
     /**
      * Unused API
      */
-    void packingColorOddLayersWithColorOne(Tree *root) {
-        buildLevelOrderTraversalStructure(root);
-
+    void packingColorOddLayersWithColorOne() {
         int levels = levelOrderTraversal.size();
         for (int i = 0; i < levels; i++) {
             int levelID = i + 1;
@@ -62,7 +76,7 @@ public:
         }
     }
 
-    void greedilyMaximizeNodesWithColorOne(Tree *root) {
+    void greedilyMaximizeNodesWithColorOne() {
         // maximize the number of nodes to be colored with color 1
         // to do that start with coloring from the last level (most node)
         // in any layer.
@@ -75,10 +89,10 @@ public:
         }
     }
 
-    int approximatePackingColor(Tree *root) {
+    int approximatePackingColor(int rootNode) {
         // maximize the number of nodes to be colored with color 1
-        buildLevelOrderTraversalStructure(root);
-        greedilyMaximizeNodesWithColorOne(root);
+        buildLevelOrderTraversalStructure(rootNode);
+        greedilyMaximizeNodesWithColorOne();
 
         // start from the last uncolored level
         int lastUncoloredLevel = this->levelOrderTraversal.size() - 2;
