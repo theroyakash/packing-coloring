@@ -15,7 +15,7 @@ run: main.o
 rerun:
 	./$(BUILD_DIR)/main
 
-compile: main.o
+make: main.o
 	mkdir -p $(BUILD_DIR)
 	$(CC) $(CFLAGs) $(BUILD_DIR)/main.o -o $(BUILD_DIR)/main
 	@echo Compiling Done ✅
@@ -23,7 +23,7 @@ compile: main.o
 main.o: main.cpp
 	@echo Compiling Code 🎲
 	mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGs) -Wall -c main.cpp
+	$(CC) $(CFLAGs) -Wall -c main.cpp -o $(BUILD_DIR)/main.o
 
 test: test_main.o
 	$(CC) $(CFLAGs) $(BUILD_DIR)/test_main.o -o $(BUILD_DIR)/test
