@@ -4,12 +4,11 @@
 #include <cassert>
 #include <iostream>
 #include "../tree.h"
-
-void printGreenOK(string fn_name) {
-    std::cout << fn_name << " " << "\033[32m[ ok ]\033[0m" << std::endl;
-}
+#include "test_utils.h"
 
 void test_buildLevelOrderTraversalStructureWithTreeReference() {
+    TestAssertService::setUp("buildLevelOrderTraversalStructureWithTreeReference");
+
     // Create a sample tree
     Tree* root = new Tree(1);
     root->children.push_back(new Tree(2));
@@ -23,18 +22,19 @@ void test_buildLevelOrderTraversalStructureWithTreeReference() {
 
     // Verify the result
 
-    assert(result.size() == 1);
-    assert(result[0].size() == 1);
-    assert(result[0][0]->data == 1);
-    assert(result[1].size() == 2);
-    assert(result[1][0]->data == 2);
-    assert(result[1][1]->data == 3);
-    assert(result[2].size() == 3);
-    assert(result[2][0]->data == 4);
-    assert(result[2][1]->data == 5);
-    assert(result[2][2]->data == 6);
+    TestAssertService::assertEqual((int)result.size(), 3, "size");
+    TestAssertService::assertEqual((int)result[0].size(), 1, "individual level");
+    TestAssertService::assertEqual(result[0][0]->data, 1, "node value at [0][0]");
+    TestAssertService::assertEqual((int)result[1].size(), 2, "size at level 1");
+    TestAssertService::assertEqual(result[1][0]->data, 2, "node value at [1][0]");
+    TestAssertService::assertEqual(result[1][1]->data, 3, "node value at [1][1]");
+    TestAssertService::assertEqual((int)result[2].size(), 3, "size at level 2");
+    TestAssertService::assertEqual(result[2][0]->data, 4, "node value at [2][0]");
+    TestAssertService::assertEqual(result[2][1]->data, 5, "node value at [2][1]");
+    TestAssertService::assertEqual(result[2][2]->data, 6, "node value at [2][2]");
 
-    printGreenOK("buildLevelOrderTraversalStructureWithTreeReference");
+
+    TestAssertService::cleanUp("buildLevelOrderTraversalStructureWithTreeReference");
 }
 
 #endif // TREE_TESTS

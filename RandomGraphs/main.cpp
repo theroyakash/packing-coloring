@@ -19,7 +19,7 @@
 #include <math.h>
 
 #include "color.h"
-#include "graph.h"
+#include "graph.hpp"
 #include "tree.h"
 
 using namespace std;

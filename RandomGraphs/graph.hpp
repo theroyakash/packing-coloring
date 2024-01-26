@@ -2,7 +2,7 @@
 #define GRAPHS
 
 #include "color.h"
-#include "UnionFind.h"
+#include "UnionFind.hpp"
 #include "tree.h"
 #include <fstream>
 #include <iostream>

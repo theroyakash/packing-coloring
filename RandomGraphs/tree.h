@@ -32,6 +32,11 @@ public:
     }
 };
 
+
+/**
+ * @namespace TreeServices
+ * @brief Contains functions and classes related to tree operations.
+ */
 namespace TreeServices {
 /**
  * Builds a level order traversal structure with tree references.
@@ -58,10 +63,10 @@ vector<vector<Tree *>> buildLevelOrderTraversalStructureWithTreeReference(Tree *
 
         q.pop();
 
-        if (depth > levelOrderTraversal.size()) {
+        if (depth > (int) levelOrderTraversal.size()) {
             vector<Tree *> level = {front_root};
             levelOrderTraversal.push_back(level);
-        } else if (depth == levelOrderTraversal.size()) {
+        } else if (depth == (int) levelOrderTraversal.size()) {
             levelOrderTraversal[depth - 1].push_back(front_root);
         }
 
