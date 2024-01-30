@@ -7,7 +7,8 @@
 #include "test_utils.h"
 
 void test_buildLevelOrderTraversalStructureWithTreeReference() {
-    TestAssertService::setUp("buildLevelOrderTraversalStructureWithTreeReference");
+    std::string fn_name = "Level Order Traversal of a Tree";
+    TestAssertService::setUp(fn_name);
 
     // Create a sample tree
     Tree* root = new Tree(1);
@@ -34,7 +35,7 @@ void test_buildLevelOrderTraversalStructureWithTreeReference() {
     TestAssertService::assertEqual(result[2][2]->data, 6, "node value at [2][2]");
 
 
-    TestAssertService::cleanUp("buildLevelOrderTraversalStructureWithTreeReference");
+    TestAssertService::cleanUp(fn_name);
 }
 
 #endif // TREE_TESTS

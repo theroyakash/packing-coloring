@@ -14,6 +14,11 @@ public:
         this->colorID = colorID;
     }
 
+    bool operator==(const Color& other) const {
+        return colorID == other.colorID;
+    }
+
+
     friend std::ostream &operator<<(std::ostream &, Color &);
 };
 

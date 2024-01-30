@@ -77,6 +77,36 @@ vector<vector<Tree *>> buildLevelOrderTraversalStructureWithTreeReference(Tree *
 
     return levelOrderTraversal;
 }
+
+vector<vector<int>> buildLevelOrderTraversal(Tree* root) {
+    vector<vector<int>> levelOrderTraversal;
+    // do level order traversal (keep track of depth when doing so)
+    queue<pair<Tree *, int>> q;
+    q.push({root, 1});
+
+    while (not q.empty()) {
+        auto front = q.front();
+
+        Tree *front_root = front.first;
+        int depth = front.second;
+
+        q.pop();
+
+        if (depth > (int) levelOrderTraversal.size()) {
+            vector<int> level = {front_root->data};
+            levelOrderTraversal.push_back(level);
+        } else if (depth == (int) levelOrderTraversal.size()) {
+            levelOrderTraversal[depth - 1].push_back(front_root->data);
+        }
+
+        for (Tree* child : front_root->children) {
+            q.push({child, depth + 1});
+        }
+    }
+
+    return levelOrderTraversal;
+}
+
 }; // namespace TreeServices
 
 #endif // TREE_H
