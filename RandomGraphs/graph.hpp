@@ -58,8 +58,8 @@ public:
      * @param startingNode starting node of the graph.
      */
     void calculateLevelOrderTraversal(int startingNode) {
-        queue<pair<int, int>> q; // node and depth
-        vector<bool> visited(this->adj_list.size(), false); // visited nodes
+        queue<pair<int, int>> q;                             // node and depth
+        vector<bool> visited(this->adj_list.size(), false);  // visited nodes
 
         q.push({startingNode, 0});
         visited[startingNode] = true;
@@ -87,12 +87,31 @@ public:
         }
     }
 
+    bool checkIfThisLevelIsPossibleToColorWithColorOne(int level_id, vector<bool> &levelsColoredWithColorOne) {
+        // check if the one level up and one level down is
+        // already colored with color 1, if not color this level with color 1
+        if ((level_id - 1 >= 0 and not levelsColoredWithColorOne[level_id - 1]) and
+            (level_id + 1 < (int)this->levelOrderTraversalSorted.size() and not levelsColoredWithColorOne[level_id + 1])) {
+            return true;
+        }
+
+        // handle the outermost levels separately
+        if (level_id == 0 and not levelsColoredWithColorOne[1]) {
+            return true;
+        } else if (level_id == (int)this->levelOrderTraversalSorted.size() - 1 and not levelsColoredWithColorOne[level_id - 1]) {
+            return true;
+        }
+
+        return false;
+    }
+
     /**
      * Maximizes the color of nodes in the graph.
      * The function sorts the level order traversal of the graph in descending order of node count per level.
      * Then, it assigns Color(1) to every other node in each level, starting from the first level.
      */
     void maximizeColorOne() {
+        vector<bool> levelsColoredWithColorOne(this->levelOrderTraversal.size(), false);
         std::sort(
             this->levelOrderTraversalSorted.begin(),
             this->levelOrderTraversalSorted.end(),
@@ -101,10 +120,15 @@ public:
             });
 
         for (int level_id = 0; level_id < (int)this->levelOrderTraversalSorted.size(); level_id++) {
-            auto level = this->levelOrderTraversalSorted[level_id];
-            if (level_id % 2 != 0) continue;
-            
-            for (auto node : level) this->colors[node] = Color(1);
+            // check if the one level up and one level down is
+            // already colored with color 1, if not color this level with color 1
+            if (checkIfThisLevelIsPossibleToColorWithColorOne(level_id, levelsColoredWithColorOne)) {
+                levelsColoredWithColorOne[level_id] = true;
+                auto level = this->levelOrderTraversalSorted[level_id];
+                for (auto node : level) this->colors[node] = Color(1);
+            }
+            // else we don't color this level with color one and
+            // move on to the next possible level
         }
     }
 
@@ -125,18 +149,18 @@ public:
         calculateLevelOrderTraversal(rootNode);
         maximizeColorOne();
 
-        int maxReusableColorUpperBound = this->levelOrderTraversal.size() * 2 + 2;
+        int maxReusableColorUpperBound = this->maxNodes / 10;
         int uniquelyUsedColors = 0;
 
         for (int level = this->levelOrderTraversal.size() - 1; level >= 0; level--) {
             vector<int> thisLevel = levelOrderTraversal[level];
-            // if any node in this layer is colored with 
+            // if any node in this layer is colored with
             // color 1 that means the whole layer is colored with color 1
             // so we can skip this layer
-            if (this->colors[thisLevel[0]] == Color(1)) continue;
+            if (this->colors[thisLevel[0]] == Color(1)) continue; // level already colored with color 1, move on
 
             for (auto candidate : thisLevel) {
-                if (colors[candidate].colorID != 0) continue;
+                if (colors[candidate] != Color(0)) continue; // node already colored, move on
                 // we need to color this candidate.
                 // for each node do a bfs to find if it is colorable with color = color
                 int currentlyExploringColor = 1;
@@ -313,17 +337,15 @@ pair<Graph, double> generateGnP(int n, double p = 0) {
     Graph G(n);
 
     // we add each possible edge with probability p.
-    // edges are un-directed, hence considered only once.
+    // edges are un-directed, thereby considered only once.
+    std::random_device randomDevice;
+    std::mt19937 generator(randomDevice());    // mt19937 is a standard mersenne_twister_engine
+    std::uniform_real_distribution<double> urdist(0.0, 1.0);
+
     for (int i = 1; i <= n; i++) {
         for (int j = i + 1; j <= n; j++) {
             // generate a random number between 0 and 1.
-            double random_number = static_cast<double>((rand() % 100)) / 100;
-
-            // std::ofstream file("randoms.txt", std::ios::app); // Open the file in append mode
-            // if (file.is_open()) {
-            //     file << random_number << "\n"; // Append the random number to the file
-            //     file.close();
-            // }
+            double random_number = urdist(generator);
 
             if (random_number <= p) {
                 // add edge between i and j.
