@@ -316,7 +316,8 @@ void recordMultipleRandomGraphRuns(int caseid) {
     file.close();
 
     cout << "Case with nodes" << total_nodes << " complete"
-         << "\n" << endl;
+         << "\n"
+         << endl;
 }
 
 /**
@@ -347,7 +348,8 @@ int main() {
     file << MULTIPLE_RUN_CSV_HEADER << endl;
     file.close();
 
-    int testcases = 1; cin >> testcases;
+    int testcases = 1;
+    cin >> testcases;
     int caseid = 1;
 
     while (testcases--) {
