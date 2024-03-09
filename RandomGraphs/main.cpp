@@ -24,7 +24,13 @@
 
 #include "color.h"
 #include "graph.hpp"
+#include "root_selector.cpp"
 #include "tree.h"
+
+#define FILE_CREATION_ERR "file_error"
+#define MULTIPLE_GRAPH_STATS_DIR "./stastistics/"
+#define GENERATED_GRAPHS_PATH "./generatedgraphs/"
+#define MULTIPLE_RUN_CSV_HEADER "Case ID,Number of nodes,Probability,Number of edges in MST,Selected root node,Time taken to perform the packing coloring,Maximum reusable colors used,Total colors used,Uniquely used colors,1,2,One Fraction"
 
 using namespace std;
 
@@ -45,9 +51,10 @@ void fileIO() {
 
 /**
  * Writes the edges of the Minimum Spanning Tree (MST) to a file.
- * The file is named "edges.txt" and is located in the "generatedgraphs" directory.
- * The function appends the edges to the file in remove and append mode.
- * Additionally, it appends MST information to a CSV file named "mst_info.csv".
+ * The file is named "edges.txt" and is located in the "generatedgraphs"
+ * directory. The function appends the edges to the file in remove and append
+ * mode. Additionally, it appends MST information to a CSV file named
+ * "mst_info.csv".
  *
  * @param MST The Minimum Spanning Tree (MST) graph.
  * @return The filename (without extension) of the generated graph file.
@@ -61,7 +68,7 @@ string writeMSTEdgesToAFile(Graph MST) {
     std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
 
     // Convert the current time to a string
-    std::tm* timeInfo = std::localtime(&currentTime);
+    std::tm *timeInfo = std::localtime(&currentTime);
     std::stringstream ss;
     ss << std::put_time(timeInfo, "%Y%m%d_%H%M%S");
 
@@ -69,10 +76,10 @@ string writeMSTEdgesToAFile(Graph MST) {
     std::string fileName = "random_graph_" + ss.str() + ".txt";
     std::string filename_without_extension = "random_graph_" + ss.str();
 
-    std::ofstream file("./generatedgraphs/" + fileName, std::ios::trunc);
+    std::ofstream file(GENERATED_GRAPHS_PATH + fileName, std::ios::trunc);
     file.close();
 
-    file.open("./generatedgraphs/" + fileName, std::ios::app);
+    file.open(GENERATED_GRAPHS_PATH + fileName, std::ios::app);
 
     if (file.is_open()) {
         for (auto edge : MST.edges) {
@@ -112,34 +119,47 @@ pair<Graph, string> generateRandomGraph(int nodes) {
 
     std::string stat_fileName = filename + "_stats.txt";
 
-    std::ofstream stat_file("./generatedgraphs/" + stat_fileName, std::ios::trunc);
+    std::ofstream stat_file(GENERATED_GRAPHS_PATH + stat_fileName,
+                            std::ios::trunc);
     if (!stat_file.is_open()) {
-        std::cout << "Error opening this [file] \nexiting" << "\n";
-        return {MST, "file_error"};
+        std::cout << "Error opening this [file] \nexiting"
+                  << "\n";
+        return {MST, FILE_CREATION_ERR};
     }
 
     stat_file << "Number of nodes: " << nodes << "\n";
     stat_file << "Probability: " << result.second << "\n";
     stat_file << "Number of edges in MST: " << MST.edges.size() << "\n";
 
-    stat_file << "****************************************" << "\n";
+    stat_file << "****************************************"
+              << "\n";
     stat_file.close();
 
     return {MST, stat_fileName};
 }
 
 /**
- * @brief Chooses a root node for the tree.
+ * Generates a random graph with a given number of nodes and a probability of edge creation.
+ * The function calculates the probability based on the number of nodes and generates a graph using the G(n,p) model.
+ * It then generates the minimum spanning tree (MST) of the generated graph.
  *
- * This function chooses a root node for the tree. It returns the nodeID of the
- * root node in the graph.
- *
- * @param g The graph.
- * @return The nodeID of the choosen root node.
+ * @param nodes The number of nodes in the graph.
+ * @return A pair containing the generated MST and the probability used for graph generation.
  */
-int chooseARoot(Graph g) {
-    int root = 1;
-    return root;
+pair<Graph, double> generateRandomGraphWithProbability(int nodes) {
+    srand(time(0));
+    double logn_f_n = log2(nodes) / nodes;
+
+    // choose a probability uniformly at random
+    // between 1 * logn_f_n and 2 * logn_f_n
+    double probability = (rand() % 100) / 100.0;
+    probability = probability * logn_f_n;
+    probability += logn_f_n;
+
+    auto result = GraphServices::generateGnP(nodes, probability);
+    Graph MST = GraphServices::generateMST(result.first);
+
+    return {MST, probability};
 }
 
 /**
@@ -159,23 +179,27 @@ void solve(int caseid) {
     Graph MST = result.first;
     std::string stats = result.second;
 
-    if (stats == "file_error") return;
+    if (stats == FILE_CREATION_ERR)
+        return;
 
-    std::ofstream stat_file("./generatedgraphs/" + stats, std::ios::app);
+    std::ofstream stat_file(GENERATED_GRAPHS_PATH + stats, std::ios::app);
     if (!stat_file.is_open()) {
-        std::cout << "Error opening this [file] \nexiting" << "\n";
+        std::cout << "Error opening this [file] \nexiting"
+                  << "\n";
         return;
     }
 
-
-    // will start the packing coloring from node 1, arbitarily
-    int PACKING_COLORING_NODE_START = 1;
+    int PACKING_COLORING_NODE_START =
+        RootSelector::treeCenterRootSelectionScheme(MST);
     auto procedure_start = std::chrono::high_resolution_clock::now();
-    int uniquelyUsedColors = MST.approximatePackingColor(PACKING_COLORING_NODE_START);
+    int uniquelyUsedColors =
+        MST.approximatePackingColor(PACKING_COLORING_NODE_START);
     auto procedure_end = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<float> duration = procedure_end - procedure_start;
-    stat_file << "⏳ " << duration.count() << " seconds" << "\n";
+    stat_file << "SELECTED ROOT NODE: " << PACKING_COLORING_NODE_START << "\n";
+    stat_file << "⏳ " << duration.count() << " seconds"
+              << "\n";
 
     vector<Color> colors = MST.colors;
 
@@ -184,41 +208,150 @@ void solve(int caseid) {
     map<int, int> colorCounter;
 
     for (int i = 1; i < (int)colors.size(); i++) {
-        maximumReusableColorID = std::max(colors[i].colorID, maximumReusableColorID);
+        maximumReusableColorID =
+            std::max(colors[i].colorID, maximumReusableColorID);
         colorCounter[colors[i].colorID]++;
     }
 
-    stat_file << "Maximum Reusable Colors used: " << maximumReusableColorID << "\n";
+    stat_file << "Maximum Reusable Colors used: " << maximumReusableColorID
+              << "\n";
 
     for (auto counter : colorCounter) {
-        stat_file << "[COLOR]: " << counter.first << " -> " << counter.second << "\n";
+        stat_file << "[COLOR]: " << counter.first << " -> " << counter.second
+                  << "\n";
     }
 
     stat_file << "uniquelyUsedColors: " << uniquelyUsedColors << "\n";
-    
+
     int totalColorsUsed = maximumReusableColorID + uniquelyUsedColors;
     stat_file << "Total Colors Used = " << totalColorsUsed << "\n";
 
-    stat_file << "****************************************" << "\n";
+    stat_file << "****************************************"
+              << "\n";
     stat_file.close();
+}
+
+void recordMultipleRandomGraphRuns(int caseid) {
+    int total_nodes;
+    cin >> total_nodes;
+    std::cout << "graph generation started for " << total_nodes << endl;
+    pair<Graph, double> result = generateRandomGraphWithProbability(total_nodes);
+    std::cout << "graph generation with " << total_nodes << " is complete" << endl;
+    Graph MST = result.first;
+    double probability = result.second;
+
+    std::string stats = std::string(MULTIPLE_GRAPH_STATS_DIR) + "stats.csv";
+    std::ofstream file(stats, std::ios::app);
+
+    if (!file.is_open()) {
+        std::cout << "Error opening this [file] \nexiting"
+                  << endl;
+        return;
+    }
+
+    cout << "RUNNING for case " << caseid << " with " << total_nodes << " nodes"
+         << " and probability " << probability << endl;
+
+    int PACKING_COLORING_NODE_START =
+        RootSelector::treeCenterRootSelectionScheme(MST);
+
+    std::cout << "Selected Root = " << PACKING_COLORING_NODE_START << endl;
+
+    auto procedure_start = std::chrono::high_resolution_clock::now();
+    int uniquelyUsedColors =
+        MST.approximatePackingColor(PACKING_COLORING_NODE_START);
+    auto procedure_end = std::chrono::high_resolution_clock::now();
+
+    cout << "complete for" << caseid << " with " << total_nodes << " nodes"
+         << " and probability " << probability << endl;
+
+    std::chrono::duration<float> duration = procedure_end - procedure_start;
+
+    vector<Color> colors = MST.colors;
+
+    int maximumReusableColorID = -1;
+
+    map<int, int> colorCounter;
+
+    for (int i = 1; i < (int)colors.size(); i++) {
+        maximumReusableColorID =
+            std::max(colors[i].colorID, maximumReusableColorID);
+        colorCounter[colors[i].colorID]++;
+    }
+
+    int totalColorsUsed = maximumReusableColorID + uniquelyUsedColors;
+
+    /**
+     * Write the statistics to a CSV file
+     * Columns are listed below
+     * - Case ID ✅
+     * - Number of nodes ✅
+     * - Probability ✅
+     * - Number of edges in MST ✅
+     * - Selected root node ✅
+     * - Time taken to perform the packing coloring ✅
+     * - Maximum reusable colors used ✅
+     * - Total colors used ✅
+     * - Uniquely used colors ✅
+     * - Total number of Color 1 used ✅
+     * - Total number of Color 2 used ✅
+     * - Fraction of Color 1 used w.r.t total nodes ✅
+     */
+
+    file << caseid << ","
+         << total_nodes << ","
+         << std::to_string(probability) << ","
+         << MST.edges.size() << ","
+         << PACKING_COLORING_NODE_START << ","
+         << duration.count() << " seconds,"
+         << maximumReusableColorID << ","
+         << totalColorsUsed << ","
+         << uniquelyUsedColors << ","
+         << colorCounter[1] << ","
+         << colorCounter[2] << ","
+         << ((double)colorCounter[1] / total_nodes) * 100 << "%"
+         << "\n";
+
+    // Close the stats file at the end
+    file.close();
+
+    cout << "Case with nodes" << total_nodes << " complete"
+         << "\n" << endl;
 }
 
 /**
  * @brief The main function of the program.
  *
- * This function is the entry point of the program. It initializes the necessary components,
- * reads the input from a file, and executes the required operations.
+ * This function is the entry point of the program. It initializes the necessary
+ * components, reads the input from a file, and executes the required
+ * operations.
  *
  * @return int The exit status of the program.
  */
 int main() {
     fileIO();
 
-    int testcases = 1;
-    // cin >> testcases;
+    // Setup the header for the CSV file
 
-    int caseid = 0;
+    std::string stats = std::string(MULTIPLE_GRAPH_STATS_DIR) + "stats.csv";
+    std::ofstream file(stats, std::ios::trunc);
+    file.close();
+
+    file.open(stats, std::ios::app);
+    if (!file.is_open()) {
+        std::cout << "Error opening this [file] \nexiting"
+                  << endl;
+        return 1;
+    }
+
+    file << MULTIPLE_RUN_CSV_HEADER << endl;
+    file.close();
+
+    int testcases = 1; cin >> testcases;
+    int caseid = 1;
+
     while (testcases--) {
-        solve(caseid++);
+        std::cout << "recordMultipleRandomGraphRuns called with caseid " << caseid << endl;
+        recordMultipleRandomGraphRuns(caseid++);
     }
 }

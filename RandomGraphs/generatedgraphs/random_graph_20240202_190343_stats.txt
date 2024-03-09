@@ -1,0 +1,42 @@
+Number of nodes: 1073
+Probability: 0.0126664
+Number of edges in MST: 1072
+****************************************
+⏳ 0.00135667 seconds
+Maximum Reusable Colors used: 33
+[COLOR]: 1 -> 906
+[COLOR]: 2 -> 70
+[COLOR]: 3 -> 29
+[COLOR]: 4 -> 14
+[COLOR]: 5 -> 9
+[COLOR]: 6 -> 7
+[COLOR]: 7 -> 5
+[COLOR]: 8 -> 4
+[COLOR]: 9 -> 4
+[COLOR]: 10 -> 2
+[COLOR]: 11 -> 1
+[COLOR]: 12 -> 1
+[COLOR]: 13 -> 1
+[COLOR]: 14 -> 1
+[COLOR]: 15 -> 1
+[COLOR]: 16 -> 1
+[COLOR]: 17 -> 1
+[COLOR]: 18 -> 1
+[COLOR]: 19 -> 1
+[COLOR]: 20 -> 1
+[COLOR]: 21 -> 1
+[COLOR]: 22 -> 1
+[COLOR]: 23 -> 1
+[COLOR]: 24 -> 1
+[COLOR]: 25 -> 1
+[COLOR]: 26 -> 1
+[COLOR]: 27 -> 1
+[COLOR]: 28 -> 1
+[COLOR]: 29 -> 1
+[COLOR]: 30 -> 1
+[COLOR]: 31 -> 1
+[COLOR]: 32 -> 1
+[COLOR]: 33 -> 1
+uniquelyUsedColors: 0
+Total Colors Used = 33
+****************************************

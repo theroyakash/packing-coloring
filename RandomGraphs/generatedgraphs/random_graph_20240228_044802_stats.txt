@@ -1,0 +1,13 @@
+Number of nodes: 20
+Probability: 0.321984
+Number of edges in MST: 19
+****************************************
+SELECTED ROOT NODE: 4
+⏳ 1.025e-05 seconds
+Maximum Reusable Colors used: 2
+[COLOR]: 0 -> 3
+[COLOR]: 1 -> 16
+[COLOR]: 2 -> 1
+uniquelyUsedColors: 3
+Total Colors Used = 5
+****************************************
