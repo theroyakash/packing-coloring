@@ -157,10 +157,12 @@ public:
             // if any node in this layer is colored with
             // color 1 that means the whole layer is colored with color 1
             // so we can skip this layer
-            if (this->colors[thisLevel[0]] == Color(1)) continue; // level already colored with color 1, move on
+            if (this->colors[thisLevel[0]] == Color(1))
+                continue;  // level already colored with color 1, move on
 
             for (auto candidate : thisLevel) {
-                if (colors[candidate] != Color(0)) continue; // node already colored, move on
+                if (colors[candidate] != Color(0))
+                    continue;  // node already colored, move on
                 // we need to color this candidate.
                 // for each node do a bfs to find if it is colorable with color = color
                 int currentlyExploringColor = 1;
@@ -339,7 +341,7 @@ pair<Graph, double> generateGnP(int n, double p = 0) {
     // we add each possible edge with probability p.
     // edges are un-directed, thereby considered only once.
     std::random_device randomDevice;
-    std::mt19937 generator(randomDevice());    // mt19937 is a standard mersenne_twister_engine
+    std::mt19937 generator(randomDevice());  // mt19937 is a standard mersenne_twister_engine
     std::uniform_real_distribution<double> urdist(0.0, 1.0);
 
     for (int i = 1; i <= n; i++) {
