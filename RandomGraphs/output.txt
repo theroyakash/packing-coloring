@@ -1,904 +1,904 @@
 recordMultipleRandomGraphRuns called with caseid 1
 graph generation started for 50
 graph generation with 50 is complete
-RUNNING for case 1 with 50 nodes and probability 0.203179
-Selected Root = 5
-complete for1 with 50 nodes and probability 0.203179
+RUNNING for case 1 with 50 nodes and probability 0.173831
+Selected Root = 8
+complete for1 with 50 nodes and probability 0.173831
 Case with nodes50 complete
 
 recordMultipleRandomGraphRuns called with caseid 2
 graph generation started for 100
 graph generation with 100 is complete
-RUNNING for case 2 with 100 nodes and probability 0.119589
-Selected Root = 33
-complete for2 with 100 nodes and probability 0.119589
+RUNNING for case 2 with 100 nodes and probability 0.102315
+Selected Root = 19
+complete for2 with 100 nodes and probability 0.102315
 Case with nodes100 complete
 
 recordMultipleRandomGraphRuns called with caseid 3
 graph generation started for 200
 graph generation with 200 is complete
-RUNNING for case 3 with 200 nodes and probability 0.0687947
-Selected Root = 7
-complete for3 with 200 nodes and probability 0.0687947
+RUNNING for case 3 with 200 nodes and probability 0.0588577
+Selected Root = 68
+complete for3 with 200 nodes and probability 0.0588577
 Case with nodes200 complete
 
 recordMultipleRandomGraphRuns called with caseid 4
 graph generation started for 600
 graph generation with 600 is complete
-RUNNING for case 4 with 600 nodes and probability 0.0276865
-Selected Root = 6
-complete for4 with 600 nodes and probability 0.0276865
+RUNNING for case 4 with 600 nodes and probability 0.0236873
+Selected Root = 259
+complete for4 with 600 nodes and probability 0.0236873
 Case with nodes600 complete
 
 recordMultipleRandomGraphRuns called with caseid 5
 graph generation started for 700
 graph generation with 700 is complete
-RUNNING for case 5 with 700 nodes and probability 0.0243031
-Selected Root = 33
-complete for5 with 700 nodes and probability 0.0243031
+RUNNING for case 5 with 700 nodes and probability 0.0207927
+Selected Root = 3
+complete for5 with 700 nodes and probability 0.0207927
 Case with nodes700 complete
 
 recordMultipleRandomGraphRuns called with caseid 6
 graph generation started for 1000
 graph generation with 1000 is complete
-RUNNING for case 6 with 1000 nodes and probability 0.0179384
-Selected Root = 6
-complete for6 with 1000 nodes and probability 0.0179384
+RUNNING for case 6 with 1000 nodes and probability 0.0153473
+Selected Root = 3
+complete for6 with 1000 nodes and probability 0.0153473
 Case with nodes1000 complete
 
 recordMultipleRandomGraphRuns called with caseid 7
 graph generation started for 1500
 graph generation with 1500 is complete
-RUNNING for case 7 with 1500 nodes and probability 0.0131533
-Selected Root = 6
-complete for7 with 1500 nodes and probability 0.0131533
+RUNNING for case 7 with 1500 nodes and probability 0.0108321
+Selected Root = 4
+complete for7 with 1500 nodes and probability 0.0108321
 Case with nodes1500 complete
 
 recordMultipleRandomGraphRuns called with caseid 8
 graph generation started for 1900
 graph generation with 1900 is complete
-RUNNING for case 8 with 1900 nodes and probability 0.0107198
-Selected Root = 532
-complete for8 with 1900 nodes and probability 0.0107198
+RUNNING for case 8 with 1900 nodes and probability 0.00882808
+Selected Root = 13
+complete for8 with 1900 nodes and probability 0.00882808
 Case with nodes1900 complete
 
 recordMultipleRandomGraphRuns called with caseid 9
 graph generation started for 2000
 graph generation with 2000 is complete
-RUNNING for case 9 with 2000 nodes and probability 0.010253
-Selected Root = 1
-complete for9 with 2000 nodes and probability 0.010253
+RUNNING for case 9 with 2000 nodes and probability 0.00844365
+Selected Root = 1940
+complete for9 with 2000 nodes and probability 0.00844365
 Case with nodes2000 complete
 
 recordMultipleRandomGraphRuns called with caseid 10
 graph generation started for 2500
 graph generation with 2500 is complete
-RUNNING for case 10 with 2500 nodes and probability 0.00844321
-Selected Root = 1293
-complete for10 with 2500 nodes and probability 0.00844321
+RUNNING for case 10 with 2500 nodes and probability 0.00695323
+Selected Root = 864
+complete for10 with 2500 nodes and probability 0.00695323
 Case with nodes2500 complete
 
 recordMultipleRandomGraphRuns called with caseid 11
 graph generation started for 3000
 graph generation with 3000 is complete
-RUNNING for case 11 with 3000 nodes and probability 0.00719997
-Selected Root = 16
-complete for11 with 3000 nodes and probability 0.00719997
+RUNNING for case 11 with 3000 nodes and probability 0.00592938
+Selected Root = 697
+complete for11 with 3000 nodes and probability 0.00592938
 Case with nodes3000 complete
 
 recordMultipleRandomGraphRuns called with caseid 12
 graph generation started for 4000
 graph generation with 4000 is complete
-RUNNING for case 12 with 4000 nodes and probability 0.005594
-Selected Root = 205
-complete for12 with 4000 nodes and probability 0.005594
+RUNNING for case 12 with 4000 nodes and probability 0.00460683
+Selected Root = 2056
+complete for12 with 4000 nodes and probability 0.00460683
 Case with nodes4000 complete
 
 recordMultipleRandomGraphRuns called with caseid 13
 graph generation started for 4500
 graph generation with 4500 is complete
-RUNNING for case 13 with 4500 nodes and probability 0.00504306
-Selected Root = 13
-complete for13 with 4500 nodes and probability 0.00504306
+RUNNING for case 13 with 4500 nodes and probability 0.00415311
+Selected Root = 4
+complete for13 with 4500 nodes and probability 0.00415311
 Case with nodes4500 complete
 
 recordMultipleRandomGraphRuns called with caseid 14
 graph generation started for 5000
 graph generation with 5000 is complete
-RUNNING for case 14 with 5000 nodes and probability 0.0045956
-Selected Root = 26
-complete for14 with 5000 nodes and probability 0.0045956
+RUNNING for case 14 with 5000 nodes and probability 0.00378462
+Selected Root = 7
+complete for14 with 5000 nodes and probability 0.00378462
 Case with nodes5000 complete
 
 recordMultipleRandomGraphRuns called with caseid 15
 graph generation started for 310
 graph generation with 310 is complete
-RUNNING for case 15 with 310 nodes and probability 0.0499237
-Selected Root = 20
-complete for15 with 310 nodes and probability 0.0499237
+RUNNING for case 15 with 310 nodes and probability 0.0429825
+Selected Root = 4
+complete for15 with 310 nodes and probability 0.0429825
 Case with nodes310 complete
 
 recordMultipleRandomGraphRuns called with caseid 16
 graph generation started for 387
 graph generation with 387 is complete
-RUNNING for case 16 with 387 nodes and probability 0.0415371
-Selected Root = 157
-complete for16 with 387 nodes and probability 0.0415371
+RUNNING for case 16 with 387 nodes and probability 0.0357619
+Selected Root = 262
+complete for16 with 387 nodes and probability 0.0357619
 Case with nodes387 complete
 
 recordMultipleRandomGraphRuns called with caseid 17
 graph generation started for 491
 graph generation with 491 is complete
-RUNNING for case 17 with 491 nodes and probability 0.0340469
-Selected Root = 78
-complete for17 with 491 nodes and probability 0.0340469
+RUNNING for case 17 with 491 nodes and probability 0.0293131
+Selected Root = 12
+complete for17 with 491 nodes and probability 0.0293131
 Case with nodes491 complete
 
 recordMultipleRandomGraphRuns called with caseid 18
 graph generation started for 532
 graph generation with 532 is complete
-RUNNING for case 18 with 532 nodes and probability 0.0318297
-Selected Root = 493
-complete for18 with 532 nodes and probability 0.0318297
+RUNNING for case 18 with 532 nodes and probability 0.0274041
+Selected Root = 8
+complete for18 with 532 nodes and probability 0.0274041
 Case with nodes532 complete
 
 recordMultipleRandomGraphRuns called with caseid 19
 graph generation started for 547
 graph generation with 547 is complete
-RUNNING for case 19 with 547 nodes and probability 0.031094
-Selected Root = 24
-complete for19 with 547 nodes and probability 0.031094
+RUNNING for case 19 with 547 nodes and probability 0.0267707
+Selected Root = 145
+complete for19 with 547 nodes and probability 0.0267707
 Case with nodes547 complete
 
 recordMultipleRandomGraphRuns called with caseid 20
 graph generation started for 572
 graph generation with 572 is complete
-RUNNING for case 20 with 572 nodes and probability 0.0299457
-Selected Root = 6
-complete for20 with 572 nodes and probability 0.0299457
+RUNNING for case 20 with 572 nodes and probability 0.0257822
+Selected Root = 14
+complete for20 with 572 nodes and probability 0.0257822
 Case with nodes572 complete
 
 recordMultipleRandomGraphRuns called with caseid 21
 graph generation started for 724
 graph generation with 724 is complete
-RUNNING for case 21 with 724 nodes and probability 0.0245369
-Selected Root = 723
-complete for21 with 724 nodes and probability 0.0245369
+RUNNING for case 21 with 724 nodes and probability 0.0211253
+Selected Root = 18
+complete for21 with 724 nodes and probability 0.0211253
 Case with nodes724 complete
 
 recordMultipleRandomGraphRuns called with caseid 22
 graph generation started for 741
 graph generation with 741 is complete
-RUNNING for case 22 with 741 nodes and probability 0.0240585
-Selected Root = 14
-complete for22 with 741 nodes and probability 0.0240585
+RUNNING for case 22 with 741 nodes and probability 0.0207134
+Selected Root = 149
+complete for22 with 741 nodes and probability 0.0207134
 Case with nodes741 complete
 
 recordMultipleRandomGraphRuns called with caseid 23
 graph generation started for 918
 graph generation with 918 is complete
-RUNNING for case 23 with 918 nodes and probability 0.0200492
-Selected Root = 212
-complete for23 with 918 nodes and probability 0.0200492
+RUNNING for case 23 with 918 nodes and probability 0.0172616
+Selected Root = 146
+complete for23 with 918 nodes and probability 0.0172616
 Case with nodes918 complete
 
 recordMultipleRandomGraphRuns called with caseid 24
 graph generation started for 930
 graph generation with 930 is complete
-RUNNING for case 24 with 930 nodes and probability 0.0198282
-Selected Root = 10
-complete for24 with 930 nodes and probability 0.0198282
+RUNNING for case 24 with 930 nodes and probability 0.0170713
+Selected Root = 9
+complete for24 with 930 nodes and probability 0.0170713
 Case with nodes930 complete
 
 recordMultipleRandomGraphRuns called with caseid 25
 graph generation started for 1163
 graph generation with 1163 is complete
-RUNNING for case 25 with 1163 nodes and probability 0.0163744
-Selected Root = 795
-complete for25 with 1163 nodes and probability 0.0163744
+RUNNING for case 25 with 1163 nodes and probability 0.0140977
+Selected Root = 280
+complete for25 with 1163 nodes and probability 0.0140977
 Case with nodes1163 complete
 
 recordMultipleRandomGraphRuns called with caseid 26
 graph generation started for 1301
 graph generation with 1301 is complete
-RUNNING for case 26 with 1301 nodes and probability 0.01487
-Selected Root = 1196
-complete for26 with 1301 nodes and probability 0.01487
+RUNNING for case 26 with 1301 nodes and probability 0.0128025
+Selected Root = 40
+complete for26 with 1301 nodes and probability 0.0128025
 Case with nodes1301 complete
 
 recordMultipleRandomGraphRuns called with caseid 27
 graph generation started for 1485
 graph generation with 1485 is complete
-RUNNING for case 27 with 1485 nodes and probability 0.0132679
-Selected Root = 233
-complete for27 with 1485 nodes and probability 0.0132679
+RUNNING for case 27 with 1485 nodes and probability 0.0114231
+Selected Root = 103
+complete for27 with 1485 nodes and probability 0.0114231
 Case with nodes1485 complete
 
 recordMultipleRandomGraphRuns called with caseid 28
 graph generation started for 1725
 graph generation with 1725 is complete
-RUNNING for case 28 with 1725 nodes and probability 0.0116562
-Selected Root = 245
-complete for28 with 1725 nodes and probability 0.0116562
+RUNNING for case 28 with 1725 nodes and probability 0.0100356
+Selected Root = 5
+complete for28 with 1725 nodes and probability 0.0100356
 Case with nodes1725 complete
 
 recordMultipleRandomGraphRuns called with caseid 29
 graph generation started for 1853
 graph generation with 1853 is complete
-RUNNING for case 29 with 1853 nodes and probability 0.0109552
-Selected Root = 148
-complete for29 with 1853 nodes and probability 0.0109552
+RUNNING for case 29 with 1853 nodes and probability 0.00943205
+Selected Root = 1238
+complete for29 with 1853 nodes and probability 0.00943205
 Case with nodes1853 complete
 
 recordMultipleRandomGraphRuns called with caseid 30
 graph generation started for 1855
 graph generation with 1855 is complete
-RUNNING for case 30 with 1855 nodes and probability 0.010945
-Selected Root = 790
-complete for30 with 1855 nodes and probability 0.010945
+RUNNING for case 30 with 1855 nodes and probability 0.00942323
+Selected Root = 21
+complete for30 with 1855 nodes and probability 0.00942323
 Case with nodes1855 complete
 
 recordMultipleRandomGraphRuns called with caseid 31
 graph generation started for 2137
 graph generation with 2137 is complete
-RUNNING for case 31 with 2137 nodes and probability 0.00967935
-Selected Root = 38
-complete for31 with 2137 nodes and probability 0.00967935
+RUNNING for case 31 with 2137 nodes and probability 0.00833356
+Selected Root = 4
+complete for31 with 2137 nodes and probability 0.00833356
 Case with nodes2137 complete
 
 recordMultipleRandomGraphRuns called with caseid 32
 graph generation started for 2229
 graph generation with 2229 is complete
-RUNNING for case 32 with 2229 nodes and probability 0.00933086
-Selected Root = 107
-complete for32 with 2229 nodes and probability 0.00933086
+RUNNING for case 32 with 2229 nodes and probability 0.00803352
+Selected Root = 21
+complete for32 with 2229 nodes and probability 0.00803352
 Case with nodes2229 complete
 
 recordMultipleRandomGraphRuns called with caseid 33
 graph generation started for 2241
 graph generation with 2241 is complete
-RUNNING for case 33 with 2241 nodes and probability 0.00928736
-Selected Root = 1971
-complete for33 with 2241 nodes and probability 0.00928736
+RUNNING for case 33 with 2241 nodes and probability 0.00799607
+Selected Root = 1103
+complete for33 with 2241 nodes and probability 0.00799607
 Case with nodes2241 complete
 
 recordMultipleRandomGraphRuns called with caseid 34
 graph generation started for 2318
 graph generation with 2318 is complete
-RUNNING for case 34 with 2318 nodes and probability 0.00901816
-Selected Root = 14
-complete for34 with 2318 nodes and probability 0.00901816
+RUNNING for case 34 with 2318 nodes and probability 0.0077643
+Selected Root = 5
+complete for34 with 2318 nodes and probability 0.0077643
 Case with nodes2318 complete
 
 recordMultipleRandomGraphRuns called with caseid 35
 graph generation started for 2330
 graph generation with 2330 is complete
-RUNNING for case 35 with 2330 nodes and probability 0.0089777
-Selected Root = 6
-complete for35 with 2330 nodes and probability 0.0089777
+RUNNING for case 35 with 2330 nodes and probability 0.00772946
+Selected Root = 489
+complete for35 with 2330 nodes and probability 0.00772946
 Case with nodes2330 complete
 
 recordMultipleRandomGraphRuns called with caseid 36
 graph generation started for 2387
 graph generation with 2387 is complete
-RUNNING for case 36 with 2387 nodes and probability 0.00879063
-Selected Root = 1326
-complete for36 with 2387 nodes and probability 0.00879063
+RUNNING for case 36 with 2387 nodes and probability 0.0075684
+Selected Root = 1933
+complete for36 with 2387 nodes and probability 0.0075684
 Case with nodes2387 complete
 
 recordMultipleRandomGraphRuns called with caseid 37
 graph generation started for 2481
 graph generation with 2481 is complete
-RUNNING for case 37 with 2481 nodes and probability 0.00849957
-Selected Root = 738
-complete for37 with 2481 nodes and probability 0.00849957
+RUNNING for case 37 with 2481 nodes and probability 0.00731781
+Selected Root = 2264
+complete for37 with 2481 nodes and probability 0.00731781
 Case with nodes2481 complete
 
 recordMultipleRandomGraphRuns called with caseid 38
 graph generation started for 2770
 graph generation with 2770 is complete
-RUNNING for case 38 with 2770 nodes and probability 0.00772011
-Selected Root = 1073
-complete for38 with 2770 nodes and probability 0.00772011
+RUNNING for case 38 with 2770 nodes and probability 0.00664673
+Selected Root = 1527
+complete for38 with 2770 nodes and probability 0.00664673
 Case with nodes2770 complete
 
 recordMultipleRandomGraphRuns called with caseid 39
 graph generation started for 2810
 graph generation with 2810 is complete
-RUNNING for case 39 with 2810 nodes and probability 0.00762398
-Selected Root = 1222
-complete for39 with 2810 nodes and probability 0.00762398
+RUNNING for case 39 with 2810 nodes and probability 0.00656396
+Selected Root = 295
+complete for39 with 2810 nodes and probability 0.00656396
 Case with nodes2810 complete
 
 recordMultipleRandomGraphRuns called with caseid 40
 graph generation started for 2839
 graph generation with 2839 is complete
-RUNNING for case 40 with 2839 nodes and probability 0.00755586
-Selected Root = 11
-complete for40 with 2839 nodes and probability 0.00755586
+RUNNING for case 40 with 2839 nodes and probability 0.00650531
+Selected Root = 2
+complete for40 with 2839 nodes and probability 0.00650531
 Case with nodes2839 complete
 
 recordMultipleRandomGraphRuns called with caseid 41
 graph generation started for 2930
 graph generation with 2930 is complete
-RUNNING for case 41 with 2930 nodes and probability 0.00735024
-Selected Root = 16
-complete for41 with 2930 nodes and probability 0.00735024
+RUNNING for case 41 with 2930 nodes and probability 0.00632828
+Selected Root = 876
+complete for41 with 2930 nodes and probability 0.00632828
 Case with nodes2930 complete
 
 recordMultipleRandomGraphRuns called with caseid 42
 graph generation started for 3026
 graph generation with 3026 is complete
-RUNNING for case 42 with 3026 nodes and probability 0.0071458
-Selected Root = 6
-complete for42 with 3026 nodes and probability 0.0071458
+RUNNING for case 42 with 3026 nodes and probability 0.00615226
+Selected Root = 4
+complete for42 with 3026 nodes and probability 0.00615226
 Case with nodes3026 complete
 
 recordMultipleRandomGraphRuns called with caseid 43
 graph generation started for 3478
 graph generation with 3478 is complete
-RUNNING for case 43 with 3478 nodes and probability 0.00632512
-Selected Root = 1698
-complete for43 with 3478 nodes and probability 0.00632512
+RUNNING for case 43 with 3478 nodes and probability 0.00544569
+Selected Root = 780
+complete for43 with 3478 nodes and probability 0.00544569
 Case with nodes3478 complete
 
 recordMultipleRandomGraphRuns called with caseid 44
 graph generation started for 3571
 graph generation with 3571 is complete
-RUNNING for case 44 with 3571 nodes and probability 0.00618033
-Selected Root = 311
-complete for44 with 3571 nodes and probability 0.00618033
+RUNNING for case 44 with 3571 nodes and probability 0.00532103
+Selected Root = 16
+complete for44 with 3571 nodes and probability 0.00532103
 Case with nodes3571 complete
 
 recordMultipleRandomGraphRuns called with caseid 45
 graph generation started for 3692
 graph generation with 3692 is complete
-RUNNING for case 45 with 3692 nodes and probability 0.0062268
-Selected Root = 18
-complete for45 with 3692 nodes and probability 0.0062268
+RUNNING for case 45 with 3692 nodes and probability 0.00516761
+Selected Root = 23
+complete for45 with 3692 nodes and probability 0.00516761
 Case with nodes3692 complete
 
 recordMultipleRandomGraphRuns called with caseid 46
 graph generation started for 3903
 graph generation with 3903 is complete
-RUNNING for case 46 with 3903 nodes and probability 0.00593003
-Selected Root = 1261
-complete for46 with 3903 nodes and probability 0.00593003
+RUNNING for case 46 with 3903 nodes and probability 0.00492131
+Selected Root = 1977
+complete for46 with 3903 nodes and probability 0.00492131
 Case with nodes3903 complete
 
 recordMultipleRandomGraphRuns called with caseid 47
 graph generation started for 3976
 graph generation with 3976 is complete
-RUNNING for case 47 with 3976 nodes and probability 0.0058342
-Selected Root = 12
-complete for47 with 3976 nodes and probability 0.0058342
+RUNNING for case 47 with 3976 nodes and probability 0.00484178
+Selected Root = 17
+complete for47 with 3976 nodes and probability 0.00484178
 Case with nodes3976 complete
 
 recordMultipleRandomGraphRuns called with caseid 48
 graph generation started for 4078
 graph generation with 4078 is complete
-RUNNING for case 48 with 4078 nodes and probability 0.00570566
-Selected Root = 570
-complete for48 with 4078 nodes and probability 0.00570566
+RUNNING for case 48 with 4078 nodes and probability 0.00473511
+Selected Root = 1620
+complete for48 with 4078 nodes and probability 0.00473511
 Case with nodes4078 complete
 
 recordMultipleRandomGraphRuns called with caseid 49
 graph generation started for 4083
 graph generation with 4083 is complete
-RUNNING for case 49 with 4083 nodes and probability 0.00569951
-Selected Root = 8
-complete for49 with 4083 nodes and probability 0.00569951
+RUNNING for case 49 with 4083 nodes and probability 0.00473001
+Selected Root = 3
+complete for49 with 4083 nodes and probability 0.00473001
 Case with nodes4083 complete
 
 recordMultipleRandomGraphRuns called with caseid 50
 graph generation started for 4221
 graph generation with 4221 is complete
-RUNNING for case 50 with 4221 nodes and probability 0.00553521
-Selected Root = 26
-complete for50 with 4221 nodes and probability 0.00553521
+RUNNING for case 50 with 4221 nodes and probability 0.00479338
+Selected Root = 3248
+complete for50 with 4221 nodes and probability 0.00479338
 Case with nodes4221 complete
 
 recordMultipleRandomGraphRuns called with caseid 51
 graph generation started for 4268
 graph generation with 4268 is complete
-RUNNING for case 51 with 4268 nodes and probability 0.00548152
-Selected Root = 3092
-complete for51 with 4268 nodes and probability 0.00548152
+RUNNING for case 51 with 4268 nodes and probability 0.00474688
+Selected Root = 2871
+complete for51 with 4268 nodes and probability 0.00474688
 Case with nodes4268 complete
 
 recordMultipleRandomGraphRuns called with caseid 52
 graph generation started for 4542
 graph generation with 4542 is complete
-RUNNING for case 52 with 4542 nodes and probability 0.00518918
-Selected Root = 9
-complete for52 with 4542 nodes and probability 0.00518918
+RUNNING for case 52 with 4542 nodes and probability 0.00449373
+Selected Root = 91
+complete for52 with 4542 nodes and probability 0.00449373
 Case with nodes4542 complete
 
 recordMultipleRandomGraphRuns called with caseid 53
 graph generation started for 4597
 graph generation with 4597 is complete
-RUNNING for case 53 with 4597 nodes and probability 0.00513443
-Selected Root = 3382
-complete for53 with 4597 nodes and probability 0.00513443
+RUNNING for case 53 with 4597 nodes and probability 0.00444631
+Selected Root = 1773
+complete for53 with 4597 nodes and probability 0.00444631
 Case with nodes4597 complete
 
 recordMultipleRandomGraphRuns called with caseid 54
 graph generation started for 4661
 graph generation with 4661 is complete
-RUNNING for case 54 with 4661 nodes and probability 0.00507223
-Selected Root = 1882
-complete for54 with 4661 nodes and probability 0.00507223
+RUNNING for case 54 with 4661 nodes and probability 0.00439245
+Selected Root = 2763
+complete for54 with 4661 nodes and probability 0.00439245
 Case with nodes4661 complete
 
 recordMultipleRandomGraphRuns called with caseid 55
 graph generation started for 4767
 graph generation with 4767 is complete
-RUNNING for case 55 with 4767 nodes and probability 0.00497265
-Selected Root = 306
-complete for55 with 4767 nodes and probability 0.00497265
+RUNNING for case 55 with 4767 nodes and probability 0.00430621
+Selected Root = 1199
+complete for55 with 4767 nodes and probability 0.00430621
 Case with nodes4767 complete
 
 recordMultipleRandomGraphRuns called with caseid 56
 graph generation started for 4966
 graph generation with 4966 is complete
-RUNNING for case 56 with 4966 nodes and probability 0.00479643
-Selected Root = 627
-complete for56 with 4966 nodes and probability 0.00479643
+RUNNING for case 56 with 4966 nodes and probability 0.00415361
+Selected Root = 243
+complete for56 with 4966 nodes and probability 0.00415361
 Case with nodes4966 complete
 
 recordMultipleRandomGraphRuns called with caseid 57
 graph generation started for 5070
 graph generation with 5070 is complete
-RUNNING for case 57 with 5070 nodes and probability 0.00245184
-Selected Root = 52
-complete for57 with 5070 nodes and probability 0.00245184
+RUNNING for case 57 with 5070 nodes and probability 0.00407831
+Selected Root = 1224
+complete for57 with 5070 nodes and probability 0.00407831
 Case with nodes5070 complete
 
 recordMultipleRandomGraphRuns called with caseid 58
 graph generation started for 5123
 graph generation with 5123 is complete
-RUNNING for case 58 with 5123 nodes and probability 0.00242944
-Selected Root = 45
-complete for58 with 5123 nodes and probability 0.00242944
+RUNNING for case 58 with 5123 nodes and probability 0.00404104
+Selected Root = 34
+complete for58 with 5123 nodes and probability 0.00404104
 Case with nodes5123 complete
 
 recordMultipleRandomGraphRuns called with caseid 59
 graph generation started for 5158
 graph generation with 5158 is complete
-RUNNING for case 59 with 5158 nodes and probability 0.00241487
-Selected Root = 8
-complete for59 with 5158 nodes and probability 0.00241487
+RUNNING for case 59 with 5158 nodes and probability 0.00418419
+Selected Root = 26
+complete for59 with 5158 nodes and probability 0.00418419
 Case with nodes5158 complete
 
 recordMultipleRandomGraphRuns called with caseid 60
 graph generation started for 5167
 graph generation with 5167 is complete
-RUNNING for case 60 with 5167 nodes and probability 0.00241116
-Selected Root = 3585
-complete for60 with 5167 nodes and probability 0.00241116
+RUNNING for case 60 with 5167 nodes and probability 0.00417775
+Selected Root = 3885
+complete for60 with 5167 nodes and probability 0.00417775
 Case with nodes5167 complete
 
 recordMultipleRandomGraphRuns called with caseid 61
 graph generation started for 5301
 graph generation with 5301 is complete
-RUNNING for case 61 with 5301 nodes and probability 0.00235725
-Selected Root = 68
-complete for61 with 5301 nodes and probability 0.00235725
+RUNNING for case 61 with 5301 nodes and probability 0.00408434
+Selected Root = 1589
+complete for61 with 5301 nodes and probability 0.00408434
 Case with nodes5301 complete
 
 recordMultipleRandomGraphRuns called with caseid 62
 graph generation started for 5361
 graph generation with 5361 is complete
-RUNNING for case 62 with 5361 nodes and probability 0.00233392
-Selected Root = 1394
-complete for62 with 5361 nodes and probability 0.00233392
+RUNNING for case 62 with 5361 nodes and probability 0.00404393
+Selected Root = 10
+complete for62 with 5361 nodes and probability 0.00404393
 Case with nodes5361 complete
 
 recordMultipleRandomGraphRuns called with caseid 63
 graph generation started for 5516
 graph generation with 5516 is complete
-RUNNING for case 63 with 5516 nodes and probability 0.00227587
-Selected Root = 2018
-complete for63 with 5516 nodes and probability 0.00227587
+RUNNING for case 63 with 5516 nodes and probability 0.00394334
+Selected Root = 964
+complete for63 with 5516 nodes and probability 0.00394334
 Case with nodes5516 complete
 
 recordMultipleRandomGraphRuns called with caseid 64
 graph generation started for 5525
 graph generation with 5525 is complete
-RUNNING for case 64 with 5525 nodes and probability 0.00227259
-Selected Root = 141
-complete for64 with 5525 nodes and probability 0.00227259
+RUNNING for case 64 with 5525 nodes and probability 0.00393766
+Selected Root = 11
+complete for64 with 5525 nodes and probability 0.00393766
 Case with nodes5525 complete
 
 recordMultipleRandomGraphRuns called with caseid 65
 graph generation started for 5640
 graph generation with 5640 is complete
-RUNNING for case 65 with 5640 nodes and probability 0.00238624
-Selected Root = 944
-complete for65 with 5640 nodes and probability 0.00238624
+RUNNING for case 65 with 5640 nodes and probability 0.00386659
+Selected Root = 672
+complete for65 with 5640 nodes and probability 0.00386659
 Case with nodes5640 complete
 
 recordMultipleRandomGraphRuns called with caseid 66
 graph generation started for 5692
 graph generation with 5692 is complete
-RUNNING for case 66 with 5692 nodes and probability 0.00236695
-Selected Root = 4545
-complete for66 with 5692 nodes and probability 0.00236695
+RUNNING for case 66 with 5692 nodes and probability 0.00383534
+Selected Root = 5391
+complete for66 with 5692 nodes and probability 0.00383534
 Case with nodes5692 complete
 
 recordMultipleRandomGraphRuns called with caseid 67
 graph generation started for 5696
 graph generation with 5696 is complete
-RUNNING for case 67 with 5696 nodes and probability 0.00236548
-Selected Root = 62
-complete for67 with 5696 nodes and probability 0.00236548
+RUNNING for case 67 with 5696 nodes and probability 0.00398628
+Selected Root = 1682
+complete for67 with 5696 nodes and probability 0.00398628
 Case with nodes5696 complete
 
 recordMultipleRandomGraphRuns called with caseid 68
 graph generation started for 5862
 graph generation with 5862 is complete
-RUNNING for case 68 with 5862 nodes and probability 0.00230613
-Selected Root = 5018
-complete for68 with 5862 nodes and probability 0.00230613
+RUNNING for case 68 with 5862 nodes and probability 0.00388626
+Selected Root = 16
+complete for68 with 5862 nodes and probability 0.00388626
 Case with nodes5862 complete
 
 recordMultipleRandomGraphRuns called with caseid 69
 graph generation started for 5934
 graph generation with 5934 is complete
-RUNNING for case 69 with 5934 nodes and probability 0.00228136
-Selected Root = 39
-complete for69 with 5934 nodes and probability 0.00228136
+RUNNING for case 69 with 5934 nodes and probability 0.00384451
+Selected Root = 4056
+complete for69 with 5934 nodes and probability 0.00384451
 Case with nodes5934 complete
 
 recordMultipleRandomGraphRuns called with caseid 70
 graph generation started for 6108
 graph generation with 6108 is complete
-RUNNING for case 70 with 6108 nodes and probability 0.00222374
-Selected Root = 1046
-complete for70 with 6108 nodes and probability 0.00222374
+RUNNING for case 70 with 6108 nodes and probability 0.00374741
+Selected Root = 10
+complete for70 with 6108 nodes and probability 0.00374741
 Case with nodes6108 complete
 
 recordMultipleRandomGraphRuns called with caseid 71
 graph generation started for 6133
 graph generation with 6133 is complete
-RUNNING for case 71 with 6133 nodes and probability 0.00235932
-Selected Root = 2589
-complete for71 with 6133 nodes and probability 0.00235932
+RUNNING for case 71 with 6133 nodes and probability 0.00373389
+Selected Root = 2267
+complete for71 with 6133 nodes and probability 0.00373389
 Case with nodes6133 complete
 
 recordMultipleRandomGraphRuns called with caseid 72
 graph generation started for 6351
 graph generation with 6351 is complete
-RUNNING for case 72 with 6351 nodes and probability 0.00228746
-Selected Root = 8
-complete for72 with 6351 nodes and probability 0.00228746
+RUNNING for case 72 with 6351 nodes and probability 0.00362016
+Selected Root = 17
+complete for72 with 6351 nodes and probability 0.00362016
 Case with nodes6351 complete
 
 recordMultipleRandomGraphRuns called with caseid 73
 graph generation started for 6371
 graph generation with 6371 is complete
-RUNNING for case 73 with 6371 nodes and probability 0.0022811
-Selected Root = 52
-complete for73 with 6371 nodes and probability 0.0022811
+RUNNING for case 73 with 6371 nodes and probability 0.00374894
+Selected Root = 14
+complete for73 with 6371 nodes and probability 0.00374894
 Case with nodes6371 complete
 
 recordMultipleRandomGraphRuns called with caseid 74
 graph generation started for 6386
 graph generation with 6386 is complete
-RUNNING for case 74 with 6386 nodes and probability 0.00227635
-Selected Root = 35
-complete for74 with 6386 nodes and probability 0.00227635
+RUNNING for case 74 with 6386 nodes and probability 0.00374114
+Selected Root = 115
+complete for74 with 6386 nodes and probability 0.00374114
 Case with nodes6386 complete
 
 recordMultipleRandomGraphRuns called with caseid 75
 graph generation started for 6414
 graph generation with 6414 is complete
-RUNNING for case 75 with 6414 nodes and probability 0.00226755
-Selected Root = 3402
-complete for75 with 6414 nodes and probability 0.00226755
+RUNNING for case 75 with 6414 nodes and probability 0.00372667
+Selected Root = 1803
+complete for75 with 6414 nodes and probability 0.00372667
 Case with nodes6414 complete
 
 recordMultipleRandomGraphRuns called with caseid 76
 graph generation started for 6831
 graph generation with 6831 is complete
-RUNNING for case 76 with 6831 nodes and probability 0.00227495
-Selected Root = 2521
-complete for76 with 6831 nodes and probability 0.00227495
+RUNNING for case 76 with 6831 nodes and probability 0.00352431
+Selected Root = 2938
+complete for76 with 6831 nodes and probability 0.00352431
 Case with nodes6831 complete
 
 recordMultipleRandomGraphRuns called with caseid 77
 graph generation started for 6838
 graph generation with 6838 is complete
-RUNNING for case 77 with 6838 nodes and probability 0.00227289
-Selected Root = 40
-complete for77 with 6838 nodes and probability 0.00227289
+RUNNING for case 77 with 6838 nodes and probability 0.00352112
+Selected Root = 4555
+complete for77 with 6838 nodes and probability 0.00352112
 Case with nodes6838 complete
 
 recordMultipleRandomGraphRuns called with caseid 78
 graph generation started for 6881
 graph generation with 6881 is complete
-RUNNING for case 78 with 6881 nodes and probability 0.00226029
-Selected Root = 64
-complete for78 with 6881 nodes and probability 0.00226029
+RUNNING for case 78 with 6881 nodes and probability 0.00363128
+Selected Root = 315
+complete for78 with 6881 nodes and probability 0.00363128
 Case with nodes6881 complete
 
 recordMultipleRandomGraphRuns called with caseid 79
 graph generation started for 7011
 graph generation with 7011 is complete
-RUNNING for case 79 with 7011 nodes and probability 0.00222308
-Selected Root = 22
-complete for79 with 7011 nodes and probability 0.00222308
+RUNNING for case 79 with 7011 nodes and probability 0.0035715
+Selected Root = 20
+complete for79 with 7011 nodes and probability 0.0035715
 Case with nodes7011 complete
 
 recordMultipleRandomGraphRuns called with caseid 80
 graph generation started for 7026
 graph generation with 7026 is complete
-RUNNING for case 80 with 7026 nodes and probability 0.00221887
-Selected Root = 2
-complete for80 with 7026 nodes and probability 0.00221887
+RUNNING for case 80 with 7026 nodes and probability 0.00356474
+Selected Root = 300
+complete for80 with 7026 nodes and probability 0.00356474
 Case with nodes7026 complete
 
 recordMultipleRandomGraphRuns called with caseid 81
 graph generation started for 7073
 graph generation with 7073 is complete
-RUNNING for case 81 with 7073 nodes and probability 0.00233234
-Selected Root = 4112
-complete for81 with 7073 nodes and probability 0.00233234
+RUNNING for case 81 with 7073 nodes and probability 0.00354371
+Selected Root = 11
+complete for81 with 7073 nodes and probability 0.00354371
 Case with nodes7073 complete
 
 recordMultipleRandomGraphRuns called with caseid 82
 graph generation started for 7144
 graph generation with 7144 is complete
-RUNNING for case 82 with 7144 nodes and probability 0.00231176
-Selected Root = 3262
-complete for82 with 7144 nodes and probability 0.00231176
+RUNNING for case 82 with 7144 nodes and probability 0.00351245
+Selected Root = 3
+complete for82 with 7144 nodes and probability 0.00351245
 Case with nodes7144 complete
 
 recordMultipleRandomGraphRuns called with caseid 83
 graph generation started for 7169
 graph generation with 7169 is complete
-RUNNING for case 83 with 7169 nodes and probability 0.00230461
-Selected Root = 31
-complete for83 with 7169 nodes and probability 0.00230461
+RUNNING for case 83 with 7169 nodes and probability 0.00184011
+Selected Root = 42
+complete for83 with 7169 nodes and probability 0.00184011
 Case with nodes7169 complete
 
 recordMultipleRandomGraphRuns called with caseid 84
 graph generation started for 7197
 graph generation with 7197 is complete
-RUNNING for case 84 with 7197 nodes and probability 0.00229665
-Selected Root = 1774
-complete for84 with 7197 nodes and probability 0.00229665
+RUNNING for case 84 with 7197 nodes and probability 0.00183376
+Selected Root = 17
+complete for84 with 7197 nodes and probability 0.00183376
 Case with nodes7197 complete
 
 recordMultipleRandomGraphRuns called with caseid 85
 graph generation started for 7203
 graph generation with 7203 is complete
-RUNNING for case 85 with 7203 nodes and probability 0.00241949
-Selected Root = 30
-complete for85 with 7203 nodes and probability 0.00241949
+RUNNING for case 85 with 7203 nodes and probability 0.00183241
+Selected Root = 6009
+complete for85 with 7203 nodes and probability 0.00183241
 Case with nodes7203 complete
 
 recordMultipleRandomGraphRuns called with caseid 86
 graph generation started for 7235
 graph generation with 7235 is complete
-RUNNING for case 86 with 7235 nodes and probability 0.00240999
-Selected Root = 39
-complete for86 with 7235 nodes and probability 0.00240999
+RUNNING for case 86 with 7235 nodes and probability 0.00182521
+Selected Root = 6996
+complete for86 with 7235 nodes and probability 0.00182521
 Case with nodes7235 complete
 
 recordMultipleRandomGraphRuns called with caseid 87
 graph generation started for 7236
 graph generation with 7236 is complete
-RUNNING for case 87 with 7236 nodes and probability 0.00240969
-Selected Root = 3
-complete for87 with 7236 nodes and probability 0.00240969
+RUNNING for case 87 with 7236 nodes and probability 0.00194902
+Selected Root = 13
+complete for87 with 7236 nodes and probability 0.00194902
 Case with nodes7236 complete
 
 recordMultipleRandomGraphRuns called with caseid 88
 graph generation started for 7298
 graph generation with 7298 is complete
-RUNNING for case 88 with 7298 nodes and probability 0.00239151
-Selected Root = 1052
-complete for88 with 7298 nodes and probability 0.00239151
+RUNNING for case 88 with 7298 nodes and probability 0.00193431
+Selected Root = 29
+complete for88 with 7298 nodes and probability 0.00193431
 Case with nodes7298 complete
 
 recordMultipleRandomGraphRuns called with caseid 89
 graph generation started for 7490
 graph generation with 7490 is complete
-RUNNING for case 89 with 7490 nodes and probability 0.0024573
-Selected Root = 17
-complete for89 with 7490 nodes and probability 0.0024573
+RUNNING for case 89 with 7490 nodes and probability 0.00189023
+Selected Root = 3176
+complete for89 with 7490 nodes and probability 0.00189023
 Case with nodes7490 complete
 
 recordMultipleRandomGraphRuns called with caseid 90
 graph generation started for 7608
 graph generation with 7608 is complete
-RUNNING for case 90 with 7608 nodes and probability 0.00242343
-Selected Root = 4587
-complete for90 with 7608 nodes and probability 0.00242343
+RUNNING for case 90 with 7608 nodes and probability 0.00186417
+Selected Root = 38
+complete for90 with 7608 nodes and probability 0.00186417
 Case with nodes7608 complete
 
 recordMultipleRandomGraphRuns called with caseid 91
 graph generation started for 7838
 graph generation with 7838 is complete
-RUNNING for case 91 with 7838 nodes and probability 0.00236015
-Selected Root = 24
-complete for91 with 7838 nodes and probability 0.00236015
+RUNNING for case 91 with 7838 nodes and probability 0.00193103
+Selected Root = 53
+complete for91 with 7838 nodes and probability 0.00193103
 Case with nodes7838 complete
 
 recordMultipleRandomGraphRuns called with caseid 92
 graph generation started for 8049
 graph generation with 8049 is complete
-RUNNING for case 92 with 8049 nodes and probability 0.00230509
-Selected Root = 54
-complete for92 with 8049 nodes and probability 0.00230509
+RUNNING for case 92 with 8049 nodes and probability 0.00188598
+Selected Root = 14
+complete for92 with 8049 nodes and probability 0.00188598
 Case with nodes8049 complete
 
 recordMultipleRandomGraphRuns called with caseid 93
 graph generation started for 8071
 graph generation with 8071 is complete
-RUNNING for case 93 with 8071 nodes and probability 0.00241207
-Selected Root = 35
-complete for93 with 8071 nodes and probability 0.00241207
+RUNNING for case 93 with 8071 nodes and probability 0.00188141
+Selected Root = 64
+complete for93 with 8071 nodes and probability 0.00188141
 Case with nodes8071 complete
 
 recordMultipleRandomGraphRuns called with caseid 94
 graph generation started for 8102
 graph generation with 8102 is complete
-RUNNING for case 94 with 8102 nodes and probability 0.00240386
-Selected Root = 7840
-complete for94 with 8102 nodes and probability 0.00240386
+RUNNING for case 94 with 8102 nodes and probability 0.00187501
+Selected Root = 2409
+complete for94 with 8102 nodes and probability 0.00187501
 Case with nodes8102 complete
 
 recordMultipleRandomGraphRuns called with caseid 95
 graph generation started for 8272
 graph generation with 8272 is complete
-RUNNING for case 95 with 8272 nodes and probability 0.00235989
-Selected Root = 6626
-complete for95 with 8272 nodes and probability 0.00235989
+RUNNING for case 95 with 8272 nodes and probability 0.00195084
+Selected Root = 1150
+complete for95 with 8272 nodes and probability 0.00195084
 Case with nodes8272 complete
 
 recordMultipleRandomGraphRuns called with caseid 96
 graph generation started for 8322
 graph generation with 8322 is complete
-RUNNING for case 96 with 8322 nodes and probability 0.00245682
-Selected Root = 23
-complete for96 with 8322 nodes and probability 0.00245682
+RUNNING for case 96 with 8322 nodes and probability 0.00194042
+Selected Root = 49
+complete for96 with 8322 nodes and probability 0.00194042
 Case with nodes8322 complete
 
 recordMultipleRandomGraphRuns called with caseid 97
 graph generation started for 8504
 graph generation with 8504 is complete
-RUNNING for case 97 with 8504 nodes and probability 0.00241
-Selected Root = 6598
-complete for97 with 8504 nodes and probability 0.00241
+RUNNING for case 97 with 8504 nodes and probability 0.00190344
+Selected Root = 528
+complete for97 with 8504 nodes and probability 0.00190344
 Case with nodes8504 complete
 
 recordMultipleRandomGraphRuns called with caseid 98
 graph generation started for 8576
 graph generation with 8576 is complete
-RUNNING for case 98 with 8576 nodes and probability 0.002392
-Selected Root = 42
-complete for98 with 8576 nodes and probability 0.002392
+RUNNING for case 98 with 8576 nodes and probability 0.00199587
+Selected Root = 6765
+complete for98 with 8576 nodes and probability 0.00199587
 Case with nodes8576 complete
 
 recordMultipleRandomGraphRuns called with caseid 99
 graph generation started for 8708
 graph generation with 8708 is complete
-RUNNING for case 99 with 8708 nodes and probability 0.00235971
-Selected Root = 2324
-complete for99 with 8708 nodes and probability 0.00235971
+RUNNING for case 99 with 8708 nodes and probability 0.00196893
+Selected Root = 4
+complete for99 with 8708 nodes and probability 0.00196893
 Case with nodes8708 complete
 
 recordMultipleRandomGraphRuns called with caseid 100
 graph generation started for 8816
 graph generation with 8816 is complete
-RUNNING for case 100 with 8816 nodes and probability 0.00243803
-Selected Root = 4021
-complete for100 with 8816 nodes and probability 0.00243803
+RUNNING for case 100 with 8816 nodes and probability 0.00194745
+Selected Root = 25
+complete for100 with 8816 nodes and probability 0.00194745
 Case with nodes8816 complete
 
 recordMultipleRandomGraphRuns called with caseid 101
 graph generation started for 8907
 graph generation with 8907 is complete
-RUNNING for case 101 with 8907 nodes and probability 0.00241585
-Selected Root = 13
-complete for101 with 8907 nodes and probability 0.00241585
+RUNNING for case 101 with 8907 nodes and probability 0.00203285
+Selected Root = 6713
+complete for101 with 8907 nodes and probability 0.00203285
 Case with nodes8907 complete
 
 recordMultipleRandomGraphRuns called with caseid 102
 graph generation started for 8973
 graph generation with 8973 is complete
-RUNNING for case 102 with 8973 nodes and probability 0.00250247
-Selected Root = 15
-complete for102 with 8973 nodes and probability 0.00250247
+RUNNING for case 102 with 8973 nodes and probability 0.00201954
+Selected Root = 3217
+complete for102 with 8973 nodes and probability 0.00201954
 Case with nodes8973 complete
 
 recordMultipleRandomGraphRuns called with caseid 103
 graph generation started for 9001
 graph generation with 9001 is complete
-RUNNING for case 103 with 9001 nodes and probability 0.00249554
-Selected Root = 26
-complete for103 with 9001 nodes and probability 0.00249554
+RUNNING for case 103 with 9001 nodes and probability 0.0021161
+Selected Root = 22
+complete for103 with 9001 nodes and probability 0.0021161
 Case with nodes9001 complete
 
 recordMultipleRandomGraphRuns called with caseid 104
 graph generation started for 9024
 graph generation with 9024 is complete
-RUNNING for case 104 with 9024 nodes and probability 0.00248988
-Selected Root = 6647
-complete for104 with 9024 nodes and probability 0.00248988
+RUNNING for case 104 with 9024 nodes and probability 0.0021113
+Selected Root = 6083
+complete for104 with 9024 nodes and probability 0.0021113
 Case with nodes9024 complete
 
 recordMultipleRandomGraphRuns called with caseid 105
 graph generation started for 9037
 graph generation with 9037 is complete
-RUNNING for case 105 with 9037 nodes and probability 0.00258848
-Selected Root = 65
-complete for105 with 9037 nodes and probability 0.00258848
+RUNNING for case 105 with 9037 nodes and probability 0.00210859
+Selected Root = 5330
+complete for105 with 9037 nodes and probability 0.00210859
 Case with nodes9037 complete
 
 recordMultipleRandomGraphRuns called with caseid 106
 graph generation started for 9274
 graph generation with 9274 is complete
-RUNNING for case 106 with 9274 nodes and probability 0.0025295
-Selected Root = 8942
-complete for106 with 9274 nodes and probability 0.0025295
+RUNNING for case 106 with 9274 nodes and probability 0.00216002
+Selected Root = 7386
+complete for106 with 9274 nodes and probability 0.00216002
 Case with nodes9274 complete
 
 recordMultipleRandomGraphRuns called with caseid 107
 graph generation started for 9408
 graph generation with 9408 is complete
-RUNNING for case 107 with 9408 nodes and probability 0.00249739
-Selected Root = 1202
-complete for107 with 9408 nodes and probability 0.00249739
+RUNNING for case 107 with 9408 nodes and probability 0.0021326
+Selected Root = 6312
+complete for107 with 9408 nodes and probability 0.0021326
 Case with nodes9408 complete
 
 recordMultipleRandomGraphRuns called with caseid 108
 graph generation started for 9443
 graph generation with 9443 is complete
-RUNNING for case 108 with 9443 nodes and probability 0.00258703
-Selected Root = 3886
-complete for108 with 9443 nodes and probability 0.00258703
+RUNNING for case 108 with 9443 nodes and probability 0.00212556
+Selected Root = 29
+complete for108 with 9443 nodes and probability 0.00212556
 Case with nodes9443 complete
 
 recordMultipleRandomGraphRuns called with caseid 109
 graph generation started for 9540
 graph generation with 9540 is complete
-RUNNING for case 109 with 9540 nodes and probability 0.00256358
-Selected Root = 28
-complete for109 with 9540 nodes and probability 0.00256358
+RUNNING for case 109 with 9540 nodes and probability 0.0022033
+Selected Root = 7223
+complete for109 with 9540 nodes and probability 0.0022033
 Case with nodes9540 complete
 
 recordMultipleRandomGraphRuns called with caseid 110
 graph generation started for 9574
 graph generation with 9574 is complete
-RUNNING for case 110 with 9574 nodes and probability 0.00265216
-Selected Root = 3136
-complete for110 with 9574 nodes and probability 0.00265216
+RUNNING for case 110 with 9574 nodes and probability 0.00219632
+Selected Root = 17
+complete for110 with 9574 nodes and probability 0.00219632
 Case with nodes9574 complete
 
 recordMultipleRandomGraphRuns called with caseid 111
 graph generation started for 9684
 graph generation with 9684 is complete
-RUNNING for case 111 with 9684 nodes and probability 0.00262531
-Selected Root = 1
-complete for111 with 9684 nodes and probability 0.00262531
+RUNNING for case 111 with 9684 nodes and probability 0.0022698
+Selected Root = 27
+complete for111 with 9684 nodes and probability 0.0022698
 Case with nodes9684 complete
 
 recordMultipleRandomGraphRuns called with caseid 112
 graph generation started for 9731
 graph generation with 9731 is complete
-RUNNING for case 112 with 9731 nodes and probability 0.002614
-Selected Root = 2
-complete for112 with 9731 nodes and probability 0.002614
+RUNNING for case 112 with 9731 nodes and probability 0.00226002
+Selected Root = 2053
+complete for112 with 9731 nodes and probability 0.00226002
 Case with nodes9731 complete
 
 recordMultipleRandomGraphRuns called with caseid 113
 graph generation started for 9779
 graph generation with 9779 is complete
-RUNNING for case 113 with 9779 nodes and probability 0.00269745
-Selected Root = 5
-complete for113 with 9779 nodes and probability 0.00269745
+RUNNING for case 113 with 9779 nodes and probability 0.00234502
+Selected Root = 268
+complete for113 with 9779 nodes and probability 0.00234502
 Case with nodes9779 complete
 

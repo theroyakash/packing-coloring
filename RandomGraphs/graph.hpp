@@ -9,6 +9,7 @@
 #include <queue>
 #include <set>
 #include <vector>
+#include <random>
 
 #include "UnionFind.hpp"
 #include "color.h"
@@ -149,7 +150,9 @@ public:
         calculateLevelOrderTraversal(rootNode);
         maximizeColorOne();
 
-        int maxReusableColorUpperBound = this->maxNodes / 10;
+        // currently we are looking for colors until maxNodes explicitly
+        // difficult to bound what is the maximum we should look for.
+        int maxReusableColorUpperBound = this->maxNodes;
         int uniquelyUsedColors = 0;
 
         for (int level = this->levelOrderTraversal.size() - 1; level >= 0; level--) {
@@ -390,6 +393,11 @@ Graph generateMST(Graph &G) {
 
     return MST;
 }
+
+int computeDiamterOfArbitaryRootedTree(Graph &g, int rootID) {
+    return 0;
+}
+
 
 };  // namespace GraphServices
 

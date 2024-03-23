@@ -42,3 +42,11 @@ clean:
 	@echo cleaning 🗑️
 	rm -rf main main.o test test_main.o
 	@echo Done ✅
+
+input: generate_input.cpp
+	@echo generating input file for run 🧬
+	$(CC) $(CFLAGs) -o input generate_input.cpp
+	./input
+	@echo removing executables
+	rm -rf input
+	@echo Done ✅

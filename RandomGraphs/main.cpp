@@ -30,7 +30,7 @@
 #define FILE_CREATION_ERR "file_error"
 #define MULTIPLE_GRAPH_STATS_DIR "./stastistics/"
 #define GENERATED_GRAPHS_PATH "./generatedgraphs/"
-#define MULTIPLE_RUN_CSV_HEADER "Case ID,Number of nodes,Probability,Number of edges in MST,Selected root node,Time taken to perform the packing coloring,Maximum reusable colors used,Total colors used,Uniquely used colors,1,2,One Fraction"
+#define MULTIPLE_RUN_CSV_HEADER "Case ID,Number of nodes,Probability,Number of edges in MST,Selected root node,Time taken to perform the packing coloring,Maximum reusable colors used,Total colors used,Uniquely used colors,n/x ratio,1,2,One Fraction,MST Diameter"
 
 using namespace std;
 
@@ -257,6 +257,10 @@ void recordMultipleRandomGraphRuns(int caseid) {
 
     std::cout << "Selected Root = " << PACKING_COLORING_NODE_START << endl;
 
+    int MST_DIAMETER = GraphServices::computeDiamterOfArbitaryRootedTree(
+                                    MST,
+                               PACKING_COLORING_NODE_START);
+
     auto procedure_start = std::chrono::high_resolution_clock::now();
     int uniquelyUsedColors =
         MST.approximatePackingColor(PACKING_COLORING_NODE_START);
@@ -307,9 +311,11 @@ void recordMultipleRandomGraphRuns(int caseid) {
          << maximumReusableColorID << ","
          << totalColorsUsed << ","
          << uniquelyUsedColors << ","
+         << "n/" << total_nodes / totalColorsUsed << ","
          << colorCounter[1] << ","
          << colorCounter[2] << ","
-         << ((double)colorCounter[1] / total_nodes) * 100 << "%"
+         << ((double)colorCounter[1] / total_nodes) * 100 << "%,"
+         << MST_DIAMETER << ","
          << "\n";
 
     // Close the stats file at the end
