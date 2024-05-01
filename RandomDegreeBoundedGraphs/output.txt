@@ -1,10 +1,90 @@
-Case with nodes 88781 complete
+random_graph_20240427_180406
+Case with nodes 28 complete
 
-Case with nodes 67058 complete
+random_graph_20240427_180407
+Case with nodes 20 complete
 
-Case with nodes 95175 complete
+random_graph_20240427_180408
+Case with nodes 28 complete
 
-Case with nodes 95147 complete
+random_graph_20240427_180409
+Case with nodes 29 complete
 
-Case with nodes 84382 complete
+random_graph_20240427_180410
+Case with nodes 22 complete
+
+random_graph_20240427_180411
+Case with nodes 20 complete
+
+random_graph_20240427_180412
+Case with nodes 29 complete
+
+random_graph_20240427_180413
+Case with nodes 20 complete
+
+random_graph_20240427_180414
+Case with nodes 30 complete
+
+random_graph_20240427_180415
+Case with nodes 20 complete
+
+random_graph_20240427_180416
+Case with nodes 25 complete
+
+random_graph_20240427_180417
+Case with nodes 21 complete
+
+random_graph_20240427_180418
+Case with nodes 29 complete
+
+random_graph_20240427_180419
+Case with nodes 27 complete
+
+random_graph_20240427_180420
+Case with nodes 24 complete
+
+random_graph_20240427_180421
+Case with nodes 30 complete
+
+random_graph_20240427_180422
+Case with nodes 27 complete
+
+random_graph_20240427_180423
+Case with nodes 23 complete
+
+random_graph_20240427_180424
+Case with nodes 20 complete
+
+random_graph_20240427_180425
+Case with nodes 22 complete
+
+random_graph_20240427_180426
+Case with nodes 28 complete
+
+random_graph_20240427_180427
+Case with nodes 20 complete
+
+random_graph_20240427_180428
+Case with nodes 20 complete
+
+random_graph_20240427_180429
+Case with nodes 25 complete
+
+random_graph_20240427_180430
+Case with nodes 30 complete
+
+random_graph_20240427_180431
+Case with nodes 29 complete
+
+random_graph_20240427_180432
+Case with nodes 26 complete
+
+random_graph_20240427_180433
+Case with nodes 27 complete
+
+random_graph_20240427_180434
+Case with nodes 26 complete
+
+random_graph_20240427_180435
+Case with nodes 24 complete
 

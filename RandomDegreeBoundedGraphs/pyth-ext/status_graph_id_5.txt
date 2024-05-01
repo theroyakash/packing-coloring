@@ -1,0 +1,47 @@
+Objective value (z): 5.0
+Proper Coloring:
+node → 1: color → 2
+node → 2: color → 5
+node → 3: color → 4
+node → 4: color → 1
+node → 5: color → 1
+node → 6: color → 1
+node → 7: color → 3
+node → 8: color → 2
+node → 9: color → 1
+node → 10: color → 2
+node → 11: color → 1
+node → 12: color → 3
+node → 13: color → 1
+node → 14: color → 3
+node → 15: color → 1
+node → 16: color → 1
+node → 17: color → 2
+node → 18: color → 1
+node → 19: color → 3
+node → 20: color → 3
+node → 21: color → 2
+node → 22: color → 3
+
+
+Problem:
+Name: unknown
+Lower bound: 5.0
+Upper bound: 5.0
+Number of objectives: 1
+Number of constraints: 9408
+Number of variables: 485
+Number of nonzeros: 19256
+Sense: minimize
+
+Solver:
+Status: ok
+Termination condition: optimal
+Statistics:
+  Branch and bound: {'Number of bounded subproblems': '1161', 'Number of created subproblems': '1161'}
+Error rc: 0
+Time: 12.66596007347107
+
+Solution:
+number of solutions: 0
+number of solutions displayed: 0

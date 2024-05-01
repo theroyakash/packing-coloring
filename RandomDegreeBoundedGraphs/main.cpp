@@ -258,8 +258,8 @@ void recordMultipleRandomGraphRuns(int caseid) {
     std::cout << "Selected Root = " << PACKING_COLORING_NODE_START << endl;
 
     int MST_DIAMETER = GraphServices::computeDiamterOfArbitaryRootedTree(
-                                    MST,
-                               PACKING_COLORING_NODE_START);
+        MST,
+        PACKING_COLORING_NODE_START);
 
     auto procedure_start = std::chrono::high_resolution_clock::now();
     int uniquelyUsedColors =
@@ -336,7 +336,6 @@ void recordMultipleRandomGraphRuns(int caseid) {
  * @return int The exit status of the program.
  */
 int MULTIPLE_GNP_GRAPH_STATS_RECORD() {
-
     // Setup the header for the CSV file
 
     std::string stats = std::string(MULTIPLE_GRAPH_STATS_DIR) + "stats.csv";
@@ -365,12 +364,59 @@ int MULTIPLE_GNP_GRAPH_STATS_RECORD() {
     return 0;
 }
 
+string writeEdgesToAFile(Graph g) {
+    // write the edges of the MST in the file named "edges.txt"
+    // remove and append mode
+
+    // Get the current time
+    auto now = std::chrono::system_clock::now();
+    std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
+
+    // Convert the current time to a string
+    std::tm *timeInfo = std::localtime(&currentTime);
+    std::stringstream ss;
+    ss << std::put_time(timeInfo, "%Y%m%d_%H%M%S");
+
+    // Create a file name with the current date and time
+    std::string fileName = "random_graph_" + ss.str() + ".txt";
+    std::string filename_without_extension = "random_graph_" + ss.str();
+
+    std::ofstream file(GENERATED_GRAPHS_PATH + fileName, std::ios::trunc);
+    file.close();
+
+    file.open(GENERATED_GRAPHS_PATH + fileName, std::ios::app);
+
+    file << g.maxNodes << "\n";
+
+    if (file.is_open()) {
+        for (auto edge : g.edges) {
+            file << edge.first << " " << edge.second << "\n";
+        }
+
+        file.close();
+    }
+
+    // file << "[\n";
+    // for (auto edge : g.edges) {
+    //     file << "(" << edge.first << "," << edge.second << "),\n";
+    // }
+    // file << "]\n";
+
+    return filename_without_extension;
+}
 
 void MULTIPLE_GROWTH_DEGREE_BOUNDED_STATS_RECORD(int caseid) {
-    int nodes = 100; cin >> nodes;
-    int degree = 4; cin >> degree;
+    int nodes = 100;
+    cin >> nodes;
+    int degree = 4;
+    cin >> degree;
     Graph g = GraphServices::generateGrowthBoundedGraphsWithDegreeBound(nodes, degree);
-    // string filename = writeMSTEdgesToAFile(g);
+
+    // write all the edges to a file for safe keeping
+    string filename = writeEdgesToAFile(g);
+    std::cout << filename << "\n";
+    __libcpp_thread_sleep_for(std::chrono::seconds(1)); // wait for new filename based on time
+
     int PACKING_COLORING_NODE_START =
         RootSelector::treeCenterRootSelectionScheme(g);
 
@@ -380,7 +426,6 @@ void MULTIPLE_GROWTH_DEGREE_BOUNDED_STATS_RECORD(int caseid) {
     auto procedure_end = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<float> duration = procedure_end - procedure_start;
-
 
     vector<Color> colors = g.colors;
 
@@ -446,8 +491,9 @@ void MULTIPLE_GROWTH_DEGREE_BOUNDED_STATS_RECORD(int caseid) {
 }
 
 int main() {
-    fileIO(); 
-    int testcases; cin >> testcases;
+    fileIO();
+    int testcases;
+    cin >> testcases;
 
     int caseid = 1;
 

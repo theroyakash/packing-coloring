@@ -19,11 +19,11 @@ int main() {
     fileIO();
     srand(time(0));
 
-    int cases = 5;
-    int degree_bound = 3;
+    int cases = 30;
+    int degree_bound = 5;
 
-    int probability_lower_bound = 50000;
-    int probability_upper_bound = 100000;
+    int probability_lower_bound = 20;
+    int probability_upper_bound = 30;
 
     std::random_device randomDevice;
     std::mt19937 generator(randomDevice());
