@@ -84,11 +84,14 @@ string writeEdgesToAFile(Graph g) {
     return filename_without_extension;
 }
 
-void MULTIPLE_GROWTH_DEGREE_BOUNDED_STATS_RECORD(int caseid, Graph g) {
+void MULTIPLE_GROWTH_DEGREE_BOUNDED_STATS_RECORD(int caseid, Graph& g) {
     int nodes = g.maxNodes;
 
     int PACKING_COLORING_NODE_START =
         RootSelector::treeCenterRootSelectionScheme(g);
+
+
+    std::cout << "Choosen Root Node = " << PACKING_COLORING_NODE_START << "\n";
 
     auto procedure_start = std::chrono::high_resolution_clock::now();
     int uniquelyUsedColors =
@@ -160,7 +163,7 @@ void MULTIPLE_GROWTH_DEGREE_BOUNDED_STATS_RECORD(int caseid, Graph g) {
          << endl;
 }
 
-int main() {
+int PACKING_COLOR_ON_CUSTOM_GRAPHS() {
     fileIO();
     int testcases;
     cin >> testcases;
@@ -194,6 +197,68 @@ int main() {
         }
 
         MULTIPLE_GROWTH_DEGREE_BOUNDED_STATS_RECORD(caseid++, g);
+
+        for (int i = 1; i <= g.maxNodes; i++) {
+            int color = g.colors[i].colorID;
+            if (i % 2 == 0) std::cout << "Node: " << i << " color: " << color << "\n";
+        }
     }
+
     return 0;
+}
+
+
+int MONTE_CARLO_SIMULATION_AVG_NEIGBOURHOOD(int n, int d, int trials, int dist) {
+    double total_neighbors_within_d = 0.0;
+    for (int trial = 0; trial < trials; ++trial) {
+        Graph G = GraphServices::generateGrowthBoundedGraphsWithDegreeBound(n, d);
+        int start_node = RootSelector::treeCenterRootSelectionScheme(G);
+
+        // BFS to count the number of nodes within distance d
+        std::vector<bool> visited(n + 1, false);
+        std::vector<int> distance(n + 1, 0);
+
+        std::queue<int> q;
+        q.push(start_node);
+        visited[start_node] = true;
+
+        while (!q.empty()) {
+            int current_node = q.front();
+            q.pop();
+
+            for (int neighbor : G.adj_list[current_node]) {
+                if (!visited[neighbor] && distance[current_node] < dist) {
+                    visited[neighbor] = true;
+                    distance[neighbor] = distance[current_node] + 1;
+                    q.push(neighbor);
+                    total_neighbors_within_d += 1; // Increment for each node within distance d
+                }
+            }
+        }
+    }
+
+    return total_neighbors_within_d / trials; // Average over all trials
+}
+
+
+int MONTECARLO_main() {
+    fileIO();
+    std::vector<int> tests = {100, 200, 300, 400, 500, 600, 700, 1000, 2000}; // number of nodes
+    
+    for (auto n : tests) {
+        int d = 4;    // Maximum degree bound
+        int num_trials = 1000; // Number of Monte Carlo trials
+
+        double avg_neighbors_within_d = MONTE_CARLO_SIMULATION_AVG_NEIGBOURHOOD(n, d, num_trials, 10);
+        
+        std::cout << "Average number of neighbors within distance " << n/10 << " from any node: " << avg_neighbors_within_d << " and n = " << n << std::endl;
+
+    }
+
+    return 0;
+}
+
+
+int main() {
+    PACKING_COLOR_ON_CUSTOM_GRAPHS();
 }

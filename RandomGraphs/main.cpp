@@ -231,6 +231,11 @@ void solve(int caseid) {
     stat_file.close();
 }
 
+
+#include <map>
+
+map<int, int> COLOR_RANDOM_GRAPHS_AVERAGE;
+
 void recordMultipleRandomGraphRuns(int caseid) {
     int total_nodes;
     cin >> total_nodes;
@@ -321,6 +326,8 @@ void recordMultipleRandomGraphRuns(int caseid) {
     // Close the stats file at the end
     file.close();
 
+    COLOR_RANDOM_GRAPHS_AVERAGE[total_nodes] += totalColorsUsed;
+
     cout << "Case with nodes" << total_nodes << " complete"
          << "\n"
          << endl;
@@ -354,12 +361,16 @@ int main() {
     file << MULTIPLE_RUN_CSV_HEADER << endl;
     file.close();
 
-    int testcases = 1;
-    cin >> testcases;
+    int testcases = 1, trials;
+    cin >> trials >> testcases;
     int caseid = 1;
 
     while (testcases--) {
         std::cout << "recordMultipleRandomGraphRuns called with caseid " << caseid << endl;
         recordMultipleRandomGraphRuns(caseid++);
+    }
+
+    for (auto [n, c] : COLOR_RANDOM_GRAPHS_AVERAGE) {
+        std::cout << n << "," << c / trials << endl;
     }
 }

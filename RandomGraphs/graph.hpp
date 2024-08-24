@@ -148,7 +148,7 @@ public:
      */
     int approximatePackingColor(int rootNode) {
         calculateLevelOrderTraversal(rootNode);
-        maximizeColorOne();
+        maximizeColorOne(); // by coloring most populated levels with color 1
 
         // currently we are looking for colors until maxNodes explicitly
         // difficult to bound what is the maximum we should look for.

@@ -19,21 +19,20 @@ int main() {
     fileIO();
     srand(time(0));
 
-    int cases = 10;
 
-    int probability_lower_bound = 5000;
-    int probability_upper_bound = 10000;
+    std::vector<int> cases = {};
 
-    std::random_device randomDevice;
-    std::mt19937 generator(randomDevice());
+    for (int i = 1; i < 9; i++) {
+        cases.push_back(i * 1000);
+    }
 
-    std::uniform_int_distribution<int> distribution(probability_lower_bound, probability_upper_bound);
+    int trials = 20;
 
-    cout << cases << endl;
-
-    while (cases--) {
-        int nodes = distribution(generator);
-        std::cout << nodes << "\n";
+    std::cout << trials << " " << trials*cases.size() << "\n";
+    for (auto _case : cases) {
+        for (int i = 0; i < trials; i++) {
+            std::cout << _case << "\n";
+        }
     }
 
     return 0;
